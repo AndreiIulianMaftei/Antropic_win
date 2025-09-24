@@ -10,7 +10,7 @@ client = BeyondPresence(
 )
 
 session = client.session.create(
-    avatar_id="01234567-89ab-cdef-0123-456789abcdef",
+    avatar_id="b105a197-a3e9-4c8d-92d7-ccd53b5f5e8f",
     livekit_token="<your-livekit-token>",
     livekit_url="wss://<your-domain>.livekit.cloud",
 )

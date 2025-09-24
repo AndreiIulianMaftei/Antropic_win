@@ -1,0 +1,33 @@
+[project]
+name = "linkedInAgent"
+version = "0.1.0"
+description = "AI Newsletter Generation Agent"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic-ai==0.4.4",
+    "pydantic==2.11.7",
+    "typing-extensions>=4.6.0",
+    "pydantic-ai-slim[tavily]",
+    "arxiv-mcp-server",
+    "tenacity",
+    "pydantic-settings",
+    "python-dotenv"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0.0",
+    "pytest-asyncio",
+    "pytest-cov"
+]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+]
+pythonpath = [
+    "."
+]

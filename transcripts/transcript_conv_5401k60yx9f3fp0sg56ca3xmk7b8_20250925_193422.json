@@ -1,0 +1,351 @@
+{
+  "agent_id": "agent_7701k60ynmmvejyrk5wz40fjdvcj",
+  "conversation_id": "conv_5401k60yx9f3fp0sg56ca3xmk7b8",
+  "status": "done",
+  "user_id": "tuoFLdj49hdICpl9z6wREjkbXLm1",
+  "transcript": [
+    {
+      "role": "user",
+      "agent_metadata": null,
+      "message": "Yo, how are you?",
+      "multivoice_message": null,
+      "tool_calls": [],
+      "tool_results": [],
+      "feedback": null,
+      "llm_override": null,
+      "time_in_call_secs": 2,
+      "conversation_turn_metrics": {
+        "metrics": {
+          "convai_asr_trailing_service_latency": {
+            "elapsed_time": 0.09897580500000913
+          }
+        }
+      },
+      "rag_retrieval_info": null,
+      "llm_usage": null,
+      "interrupted": false,
+      "original_message": null,
+      "source_medium": "audio"
+    },
+    {
+      "role": "agent",
+      "agent_metadata": {
+        "agent_id": "agent_7701k60ynmmvejyrk5wz40fjdvcj",
+        "workflow_node_id": null
+      },
+      "message": "I'm doing well, thank you for asking. I'm ready to dive into our discussion. To...",
+      "multivoice_message": null,
+      "tool_calls": [],
+      "tool_results": [],
+      "feedback": null,
+      "llm_override": null,
+      "time_in_call_secs": 5,
+      "conversation_turn_metrics": {
+        "metrics": {
+          "convai_llm_service_tt_last_sentence": {
+            "elapsed_time": 0.7787816829986696
+          },
+          "convai_llm_service_ttf_sentence": {
+            "elapsed_time": 0.4285334479991434
+          },
+          "convai_tts_service_ttfb": {
+            "elapsed_time": 0.261783378000473
+          },
+          "convai_llm_service_ttfb": {
+            "elapsed_time": 0.27851446499880694
+          }
+        }
+      },
+      "rag_retrieval_info": null,
+      "llm_usage": {
+        "model_usage": {
+          "gemini-2.0-flash": {
+            "input": {
+              "tokens": 708,
+              "price": 7.08e-05
+            },
+            "input_cache_read": {
+              "tokens": 0,
+              "price": 0.0
+            },
+            "input_cache_write": {
+              "tokens": 0,
+              "price": 0.0
+            },
+            "output_total": {
+              "tokens": 47,
+              "price": 1.88e-05
+            }
+          }
+        }
+      },
+      "interrupted": true,
+      "original_message": "I'm doing well, thank you for asking. I'm ready to dive into our discussion. To start, could you share what inspired you to focus on faster bank transfers, especially given the existing competition from established players?\n",
+      "source_medium": null
+    },
+    {
+      "role": "user",
+      "agent_metadata": null,
+      "message": "Let's go.",
+      "multivoice_message": null,
+      "tool_calls": [],
+      "tool_results": [],
+      "feedback": null,
+      "llm_override": null,
+      "time_in_call_secs": 9,
+      "conversation_turn_metrics": {
+        "metrics": {
+          "convai_asr_trailing_service_latency": {
+            "elapsed_time": 0.13357836400064116
+          }
+        }
+      },
+      "rag_retrieval_info": null,
+      "llm_usage": null,
+      "interrupted": false,
+      "original_message": null,
+      "source_medium": "audio"
+    },
+    {
+      "role": "agent",
+      "agent_metadata": {
+        "agent_id": "agent_7701k60ynmmvejyrk5wz40fjdvcj",
+        "workflow_node_id": null
+      },
+      "message": "Great. Let's start with how you handle pressure. Building a...",
+      "multivoice_message": null,
+      "tool_calls": [],
+      "tool_results": [],
+      "feedback": null,
+      "llm_override": null,
+      "time_in_call_secs": 11,
+      "conversation_turn_metrics": {
+        "metrics": {
+          "convai_llm_service_tt_last_sentence": {
+            "elapsed_time": 0.6589864830002625
+          },
+          "convai_llm_service_ttf_sentence": {
+            "elapsed_time": 0.34264246900056605
+          },
+          "convai_tts_service_ttfb": {
+            "elapsed_time": 0.13840642100149125
+          },
+          "convai_llm_service_ttfb": {
+            "elapsed_time": 0.29545914200025436
+          }
+        }
+      },
+      "rag_retrieval_info": null,
+      "llm_usage": {
+        "model_usage": {
+          "gemini-2.0-flash": {
+            "input": {
+              "tokens": 736,
+              "price": 7.360000000000001e-05
+            },
+            "input_cache_read": {
+              "tokens": 0,
+              "price": 0.0
+            },
+            "input_cache_write": {
+              "tokens": 0,
+              "price": 0.0
+            },
+            "output_total": {
+              "tokens": 48,
+              "price": 1.9200000000000003e-05
+            }
+          }
+        }
+      },
+      "interrupted": true,
+      "original_message": "Great. Let's start with how you handle pressure. Building a fintech startup that aims to compete with established players is no easy feat. Can you describe a time when you faced immense pressure, and how you navigated that situation?\n",
+      "source_medium": null
+    }
+  ],
+  "metadata": {
+    "start_time_unix_secs": 1758821524,
+    "accepted_time_unix_secs": 1758821525,
+    "call_duration_secs": 16,
+    "cost": 88,
+    "deletion_settings": {
+      "deletion_time_unix_secs": null,
+      "deleted_logs_at_time_unix_secs": null,
+      "deleted_audio_at_time_unix_secs": null,
+      "deleted_transcript_at_time_unix_secs": null,
+      "delete_transcript_and_pii": false,
+      "delete_audio": false
+    },
+    "feedback": {
+      "overall_score": null,
+      "likes": 0,
+      "dislikes": 0
+    },
+    "authorization_method": "authorization_header",
+    "charging": {
+      "dev_discount": true,
+      "is_burst": false,
+      "tier": "free",
+      "llm_usage": {
+        "irreversible_generation": {
+          "model_usage": {
+            "gemini-2.0-flash": {
+              "input": {
+                "tokens": 1444,
+                "price": 0.0001444
+              },
+              "input_cache_read": {
+                "tokens": 0,
+                "price": 0.0
+              },
+              "input_cache_write": {
+                "tokens": 0,
+                "price": 0.0
+              },
+              "output_total": {
+                "tokens": 95,
+                "price": 3.8e-05
+              }
+            }
+          }
+        },
+        "initiated_generation": {
+          "model_usage": {
+            "gemini-2.0-flash": {
+              "input": {
+                "tokens": 2674,
+                "price": 0.0002674
+              },
+              "input_cache_read": {
+                "tokens": 0,
+                "price": 0.0
+              },
+              "input_cache_write": {
+                "tokens": 0,
+                "price": 0.0
+              },
+              "output_total": {
+                "tokens": 104,
+                "price": 4.16e-05
+              }
+            }
+          }
+        }
+      },
+      "llm_price": 0.000309,
+      "llm_charge": 3,
+      "call_charge": 85,
+      "free_minutes_consumed": 0.0,
+      "free_llm_dollars_consumed": 0.0
+    },
+    "phone_call": null,
+    "batch_call": null,
+    "termination_reason": "Client disconnected: 1005",
+    "error": null,
+    "main_language": "en",
+    "rag_usage": null,
+    "text_only": false,
+    "features_usage": {
+      "language_detection": {
+        "enabled": false,
+        "used": false
+      },
+      "transfer_to_agent": {
+        "enabled": false,
+        "used": false
+      },
+      "transfer_to_number": {
+        "enabled": false,
+        "used": false
+      },
+      "multivoice": {
+        "enabled": false,
+        "used": false
+      },
+      "dtmf_tones": {
+        "enabled": false,
+        "used": false
+      },
+      "external_mcp_servers": {
+        "enabled": false,
+        "used": false
+      },
+      "pii_zrm_workspace": false,
+      "pii_zrm_agent": false,
+      "tool_dynamic_variable_updates": {
+        "enabled": false,
+        "used": false
+      },
+      "is_livekit": false,
+      "voicemail_detection": {
+        "enabled": false,
+        "used": false
+      },
+      "workflow": {
+        "enabled": false,
+        "tool_node": {
+          "enabled": false,
+          "used": false
+        }
+      },
+      "agent_testing": {
+        "enabled": false,
+        "tests_ran_after_last_modification": false,
+        "tests_ran_in_last_7_days": false
+      }
+    },
+    "eleven_assistant": {
+      "is_eleven_assistant": false
+    },
+    "initiator_id": "tuoFLdj49hdICpl9z6wREjkbXLm1",
+    "conversation_initiation_source": "react_sdk",
+    "conversation_initiation_source_version": "0.5.0",
+    "timezone": null
+  },
+  "analysis": {
+    "evaluation_criteria_results": {},
+    "data_collection_results": {},
+    "call_successful": "success",
+    "transcript_summary": "The conversation begins with a greeting and confirmation of readiness to start a discussion. The user expresses enthusiasm to proceed. The agent then proposes to start with a question about handling pressure.\n",
+    "call_summary_title": "Starting a discussion"
+  },
+  "conversation_initiation_client_data": {
+    "conversation_config_override": {
+      "tts": {
+        "voice_id": null,
+        "stability": null,
+        "speed": null,
+        "similarity_boost": null
+      },
+      "conversation": {
+        "text_only": null
+      },
+      "agent": {
+        "first_message": null,
+        "language": null,
+        "prompt": null
+      }
+    },
+    "custom_llm_extra_body": {},
+    "user_id": "tuoFLdj49hdICpl9z6wREjkbXLm1",
+    "source_info": {
+      "source": "react_sdk",
+      "version": "0.5.0"
+    },
+    "dynamic_variables": {
+      "system__agent_id": "agent_7701k60ynmmvejyrk5wz40fjdvcj",
+      "system__timezone": null,
+      "system__caller_id": null,
+      "system__time_utc": "2025-09-25T17:32:20.177220+00:00",
+      "system__call_sid": null,
+      "system__called_number": null,
+      "system__time": "Thursday, 17:32 25 September 2025",
+      "system__conversation_id": "conv_5401k60yx9f3fp0sg56ca3xmk7b8",
+      "system__call_duration_secs": 15,
+      "system__current_agent_id": "agent_7701k60ynmmvejyrk5wz40fjdvcj"
+    }
+  },
+  "has_audio": true,
+  "has_user_audio": true,
+  "has_response_audio": true
+}

@@ -1,0 +1,182 @@
+{
+  "success": true,
+  "actor": "Founder 2",
+  "agent_id": "e2851df0-b25a-4b68-9a73-d619533e4d09",
+  "last_call": {
+    "call_id": "JvAfYiNrG4HxFpUSJoRo",
+    "started_at": "2025-09-25T10:40:25.371000+00:00",
+    "ended_at": "2025-09-25T10:43:02.489000+00:00",
+    "messages": [
+      {
+        "message": "\n\n\"Hi{name} Let’s keep this short and to the point. I’m not here to hear the full company pitch — I want to understand you as co-founders and how you work together under pressure. I’ll ask you a few direct questions about your relationship, motivations, strengths, and how you handle conflict. Be concise and specific.\"\n\nQuestions to follow in order:\n\n“How did you two meet?”\n\n“What made you decide to start this company together — why",
+        "sent_at": "2025-09-25T10:40:48.899000+00:00",
+        "sender": "ai"
+      },
+      {
+        "message": "\"Okay. Okay. Let's start with the questions.\"",
+        "sent_at": "2025-09-25T10:40:51.008000+00:00",
+        "sender": "user"
+      },
+      {
+        "message": "Great! Let’s dive in.\n\nFirst, how did you two meet?",
+        "sent_at": "2025-09-25T10:40:54.449000+00:00",
+        "sender": "ai"
+      },
+      {
+        "message": "\"We met at the party.\"",
+        "sent_at": "2025-09-25T10:40:58.182000+00:00",
+        "sender": "user"
+      },
+      {
+        "message": "Interesting. What made you decide to start this company together?",
+        "sent_at": "2025-09-25T10:41:02.120000+00:00",
+        "sender": "ai"
+      },
+      {
+        "message": "\"Hunger.\"",
+        "sent_at": "2025-09-25T10:41:06.011000+00:00",
+        "sender": "user"
+      },
+      {
+        "message": "That’s a strong motivation. Why each other, specifically, instead of someone else to start this venture?",
+        "sent_at": "2025-09-25T10:41:12.259000+00:00",
+        "sender": "ai"
+      },
+      {
+        "message": "\"Because we were at a very small university, and\"",
+        "sent_at": "2025-09-25T10:41:18.891000+00:00",
+        "sender": "user"
+      },
+      {
+        "message": "\"he was the only guy who knew how to code.\"",
+        "sent_at": "2025-09-25T10:41:21.658000+00:00",
+        "sender": "user"
+      },
+      {
+        "message": "Got it. So, what do you think makes you a strong team?",
+        "sent_at": "2025-09-25T10:41:24.941000+00:00",
+        "sender": "ai"
+      },
+      {
+        "message": "\"The blue ocean around us.\"",
+        "sent_at": "2025-09-25T10:41:30.303000+00:00",
+        "sender": "user"
+      },
+      {
+        "message": "Interesting perspective. Can you elaborate on that? What specific strengths do each of you bring to the team?",
+        "sent_at": "2025-09-25T10:41:36.640000+00:00",
+        "sender": "ai"
+      },
+      {
+        "message": "\"I bring the brains. He brings the muscles.\"",
+        "sent_at": "2025-09-25T10:41:42.204000+00:00",
+        "sender": "user"
+      },
+      {
+        "message": "Thank you for that. Can you detail your biggest weakness and how your co-founder complements that?",
+        "sent_at": "2025-09-25T10:41:47.679000+00:00",
+        "sender": "ai"
+      },
+      {
+        "message": "\"My biggest weakness\"",
+        "sent_at": "2025-09-25T10:41:51.213000+00:00",
+        "sender": "user"
+      },
+      {
+        "message": "\"is the\"",
+        "sent_at": "2025-09-25T10:41:53.098000+00:00",
+        "sender": "user"
+      },
+      {
+        "message": "\"coding, and she is complementing that by being able\"",
+        "sent_at": "2025-09-25T10:41:58.144000+00:00",
+        "sender": "user"
+      },
+      {
+        "message": "\"to code.\"",
+        "sent_at": "2025-09-25T10:41:58.512000+00:00",
+        "sender": "user"
+      },
+      {
+        "message": "Thank you for sharing that. Now, when was the last time you strongly disagreed, and how did you resolve it?",
+        "sent_at": "2025-09-25T10:42:04.709000+00:00",
+        "sender": "ai"
+      },
+      {
+        "message": "\"We were not sure how to continue\"",
+        "sent_at": "2025-09-25T10:42:11.472000+00:00",
+        "sender": "user"
+      },
+      {
+        "message": "\"with, uh, our main investor.\"",
+        "sent_at": "2025-09-25T10:42:14.229000+00:00",
+        "sender": "user"
+      },
+      {
+        "message": "\"But we discussed it, and we reached the conclusion that\"",
+        "sent_at": "2025-09-25T10:42:18.837000+00:00",
+        "sender": "user"
+      },
+      {
+        "message": "\"we should get his money and invest it\"",
+        "sent_at": "2025-09-25T10:42:22.915000+00:00",
+        "sender": "user"
+      },
+      {
+        "message": "\"in our product.\"",
+        "sent_at": "2025-09-25T10:42:24.524000+00:00",
+        "sender": "user"
+      },
+      {
+        "message": "That sounds",
+        "sent_at": "2025-09-25T10:42:24.662000+00:00",
+        "sender": "ai"
+      },
+      {
+        "message": "That sounds like a productive discussion. If one of you were to leave tomorrow, what do you think would break in the company?",
+        "sent_at": "2025-09-25T10:42:31.741000+00:00",
+        "sender": "ai"
+      },
+      {
+        "message": "\"Our football fantasy.\"",
+        "sent_at": "2025-09-25T10:42:38.816000+00:00",
+        "sender": "user"
+      },
+      {
+        "message": "That's an",
+        "sent_at": "2025-09-25T10:42:40.068000+00:00",
+        "sender": "ai"
+      },
+      {
+        "message": "\"Team.\"",
+        "sent_at": "2025-09-25T10:42:40.924000+00:00",
+        "sender": "user"
+      },
+      {
+        "message": "Got it. So, losing that team dynamic could impact the company significantly.",
+        "sent_at": "2025-09-25T10:42:45.240000+00:00",
+        "sender": "ai"
+      },
+      {
+        "message": "\"Maybe yes.\"",
+        "sent_at": "2025-09-25T10:42:49.354000+00:00",
+        "sender": "user"
+      },
+      {
+        "message": "Thanks for sharing that insight! It gives me a lot of clarity on your collaboration. I appreciate your honesty throughout this conversation.",
+        "sent_at": "2025-09-25T10:42:57.038000+00:00",
+        "sender": "ai"
+      },
+      {
+        "message": "\"Okay.\"",
+        "sent_at": "2025-09-25T10:43:00.770000+00:00",
+        "sender": "user"
+      },
+      {
+        "message": "\"Bye bye.\"",
+        "sent_at": "2025-09-25T10:43:01.496000+00:00",
+        "sender": "user"
+      }
+    ]
+  }
+}

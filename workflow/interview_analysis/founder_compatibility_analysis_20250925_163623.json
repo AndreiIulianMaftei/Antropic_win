@@ -1,0 +1,58 @@
+{
+  "success": true,
+  "compatibility_analysis": {
+    "overall_compatibility_score": 35,
+    "detailed_scores": {
+      "vision_alignment": {
+        "score": 20,
+        "analysis": "Founder 1's vision is unclear and shifts between AI shoes and seemingly unrelated technologies. Founder 2's vision is equally vague, focusing on a 'blue ocean' without specifics."
+      },
+      "complementary_skills": {
+        "score": 60,
+        "analysis": "Founder 1 possesses technical skills in robotics, while Founder 2 claims business expertise. However, the descriptions are superficial, and the actual complementarity is questionable."
+      },
+      "communication_style": {
+        "score": 40,
+        "analysis": "Founder 1's communication is hesitant and unclear, struggling to articulate thoughts concisely. Founder 2's responses are brief and lack depth, hindering effective dialogue."
+      },
+      "work_style_compatibility": {
+        "score": 20,
+        "analysis": "Founder 1's desire to remove Founder 2 reveals significant underlying conflict and incompatibility in work styles.  Their conflict resolution strategies are simplistic and lack depth."
+      },
+      "leadership_dynamics": {
+        "score": 50,
+        "analysis": "The responses suggest a potential power imbalance, with Founder 1's technical expertise being perceived as more critical to the product.  Lack of clear leadership roles is a concern."
+      }
+    },
+    "strengths": [
+      "Technical expertise in robotics (Founder 1)",
+      "Potential for business acumen (Founder 2)",
+      "Willingness to engage in a co-founder assessment"
+    ],
+    "challenges": [
+      "Significant underlying conflict between founders",
+      "Unclear vision and poorly defined roles",
+      "Poor communication and articulation of ideas",
+      "Unequal perceived importance of founders' contributions"
+    ],
+    "recommendations": {
+      "partnership_viability": "LOW",
+      "key_actions": [
+        "Mediated conflict resolution session",
+        "Clearly define roles, responsibilities, and equity",
+        "Develop a detailed business plan with clear milestones and metrics"
+      ],
+      "red_flags": [
+        "Founder 1's desire to remove Founder 2",
+        "Vague and shifting vision for the company"
+      ]
+    },
+    "executive_summary": "The co-founders demonstrate low compatibility due to significant underlying conflict, unclear vision, and poor communication.  The partnership is not recommended in its current state and requires substantial intervention to address fundamental issues.",
+    "metadata": {
+      "model_used": "gemini-1.5-flash",
+      "analysis_timestamp": "2025-09-25T16:36:23.869351",
+      "founder1_id": "Founder 1",
+      "founder2_id": "Founder 2"
+    }
+  }
+}

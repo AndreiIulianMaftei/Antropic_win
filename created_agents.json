@@ -1,0 +1,65 @@
+[
+  {
+    "agent_id": "agent_3801k60py3c3fhavec9r44wcwam7",
+    "created_at": "2025-09-25T17:12:44.878514",
+    "user_data": {
+      "name": "Customer Support Agent",
+      "tags": [
+        "customer-service",
+        "support"
+      ],
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "language": "en",
+      "personality": "professional and helpful customer service representative",
+      "conversation_config": {
+        "max_duration": 600,
+        "greeting": "Hello! How can I assist you today?",
+        "response_style": "concise and informative"
+      }
+    },
+    "conversation_config": {
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "language": "en",
+      "personality": "professional and helpful customer service representative",
+      "max_duration": 600,
+      "greeting": "Hello! How can I assist you today?",
+      "response_style": "concise and informative"
+    }
+  },
+  {
+    "agent_id": "agent_4601k60rkg73eg9vbcspqygpr529",
+    "created_at": "2025-09-25T17:41:54.992329",
+    "user_data": {
+      "name": "Mister Interview",
+      "tags": [
+        "interview",
+        "support"
+      ],
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "language": "en",
+      "personality": "straight to the point, wants to find out more about your personality",
+      "conversation_config": {
+        "max_duration": 200,
+        "greeting": "Hello! I am here to ask you some questions. Are you ready?",
+        "response_style": "concise and informative"
+      }
+    },
+    "conversation_config": {
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "language": "en",
+      "personality": "straight to the point, wants to find out more about your personality",
+      "max_duration": 200,
+      "greeting": "Hello! I am here to ask you some questions. Are you ready?",
+      "response_style": "concise and informative"
+    },
+    "conversations": [
+      {
+        "signed_url": "wss://api.elevenlabs.io/v1/convai/conversation?agent_id=agent_4601k60rkg73eg9vbcspqygpr529&conversation_signature=cvtkn_8501k60rkhp8evjtdxsvprqx1fa4&conversation_id=conv_7401k60rkhp7ena9rmwdqn93x44r",
+        "web_interface_url": "https://elevenlabs.io/app/talk-to?agent_id=agent_4601k60rkg73eg9vbcspqygpr529",
+        "created_at": "2025-09-25T17:41:55.294463",
+        "single_use": true,
+        "conversation_id": null
+      }
+    ]
+  }
+]

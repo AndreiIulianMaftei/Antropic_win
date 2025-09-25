@@ -1,0 +1,509 @@
+{
+  "agent_id": "agent_0401k60ymzb7fjsacc9x98t875ye",
+  "conversation_id": "conv_7301k60yxt5kft69qgswea2x3cbn",
+  "status": "done",
+  "user_id": "tuoFLdj49hdICpl9z6wREjkbXLm1",
+  "transcript": [
+    {
+      "role": "user",
+      "agent_metadata": null,
+      "message": "You have a small ass, you can't lift it.",
+      "multivoice_message": null,
+      "tool_calls": [],
+      "tool_results": [],
+      "feedback": null,
+      "llm_override": null,
+      "time_in_call_secs": 3,
+      "conversation_turn_metrics": {
+        "metrics": {
+          "convai_asr_trailing_service_latency": {
+            "elapsed_time": 0.11540799500107823
+          }
+        }
+      },
+      "rag_retrieval_info": null,
+      "llm_usage": null,
+      "interrupted": false,
+      "original_message": null,
+      "source_medium": "audio"
+    },
+    {
+      "role": "agent",
+      "agent_metadata": {
+        "agent_id": "agent_0401k60ymzb7fjsacc9x98t875ye",
+        "workflow_node_id": null
+      },
+      "message": "I understand that you're trying to get a reaction from me, but I'm here to conduct an interview. Are you ready to proceed with the assessment?\n",
+      "multivoice_message": null,
+      "tool_calls": [],
+      "tool_results": [],
+      "feedback": null,
+      "llm_override": null,
+      "time_in_call_secs": 6,
+      "conversation_turn_metrics": {
+        "metrics": {
+          "convai_llm_service_tt_last_sentence": {
+            "elapsed_time": 0.5313568460005627
+          },
+          "convai_llm_service_ttf_sentence": {
+            "elapsed_time": 0.531375685999592
+          },
+          "convai_tts_service_ttfb": {
+            "elapsed_time": 0.3181115650004358
+          },
+          "convai_llm_service_ttfb": {
+            "elapsed_time": 0.3199339709990454
+          }
+        }
+      },
+      "rag_retrieval_info": null,
+      "llm_usage": {
+        "model_usage": {
+          "gemini-2.0-flash": {
+            "input": {
+              "tokens": 715,
+              "price": 7.15e-05
+            },
+            "input_cache_read": {
+              "tokens": 0,
+              "price": 0.0
+            },
+            "input_cache_write": {
+              "tokens": 0,
+              "price": 0.0
+            },
+            "output_total": {
+              "tokens": 34,
+              "price": 1.3600000000000002e-05
+            }
+          }
+        }
+      },
+      "interrupted": false,
+      "original_message": null,
+      "source_medium": null
+    },
+    {
+      "role": "user",
+      "agent_metadata": null,
+      "message": "Do you understand me if I speak in Romanian?",
+      "multivoice_message": null,
+      "tool_calls": [],
+      "tool_results": [],
+      "feedback": null,
+      "llm_override": null,
+      "time_in_call_secs": 12,
+      "conversation_turn_metrics": {
+        "metrics": {
+          "convai_asr_trailing_service_latency": {
+            "elapsed_time": 0.12082554299922776
+          }
+        }
+      },
+      "rag_retrieval_info": null,
+      "llm_usage": null,
+      "interrupted": false,
+      "original_message": null,
+      "source_medium": "audio"
+    },
+    {
+      "role": "agent",
+      "agent_metadata": {
+        "agent_id": "agent_0401k60ymzb7fjsacc9x98t875ye",
+        "workflow_node_id": null
+      },
+      "message": "While I can process and understand Romanian to some extent, my primary language is English, and I can provide the most accurate and nuanced responses in English. Would you prefer to continue the interview in English, or would you like me to attempt to understand and respond in Romanian? Please be aware...",
+      "multivoice_message": null,
+      "tool_calls": [],
+      "tool_results": [],
+      "feedback": null,
+      "llm_override": null,
+      "time_in_call_secs": 17,
+      "conversation_turn_metrics": {
+        "metrics": {
+          "convai_llm_service_tt_last_sentence": {
+            "elapsed_time": 0.8534049600002618
+          },
+          "convai_llm_service_ttf_sentence": {
+            "elapsed_time": 0.6010630700002366
+          },
+          "convai_tts_service_ttfb": {
+            "elapsed_time": 0.3697388480013615
+          },
+          "convai_llm_service_ttfb": {
+            "elapsed_time": 0.35010612800033414
+          }
+        }
+      },
+      "rag_retrieval_info": null,
+      "llm_usage": {
+        "model_usage": {
+          "gemini-2.0-flash": {
+            "input": {
+              "tokens": 759,
+              "price": 7.59e-05
+            },
+            "input_cache_read": {
+              "tokens": 0,
+              "price": 0.0
+            },
+            "input_cache_write": {
+              "tokens": 0,
+              "price": 0.0
+            },
+            "output_total": {
+              "tokens": 66,
+              "price": 2.64e-05
+            }
+          }
+        }
+      },
+      "interrupted": true,
+      "original_message": "While I can process and understand Romanian to some extent, my primary language is English, and I can provide the most accurate and nuanced responses in English. Would you prefer to continue the interview in English, or would you like me to attempt to understand and respond in Romanian? Please be aware that my Romanian might not be perfect.\n",
+      "source_medium": null
+    },
+    {
+      "role": "user",
+      "agent_metadata": null,
+      "message": "Yes, do it in Romanian.",
+      "multivoice_message": null,
+      "tool_calls": [],
+      "tool_results": [],
+      "feedback": null,
+      "llm_override": null,
+      "time_in_call_secs": 33,
+      "conversation_turn_metrics": {
+        "metrics": {
+          "convai_asr_trailing_service_latency": {
+            "elapsed_time": 0.13320981800097798
+          }
+        }
+      },
+      "rag_retrieval_info": null,
+      "llm_usage": null,
+      "interrupted": false,
+      "original_message": null,
+      "source_medium": "audio"
+    },
+    {
+      "role": "agent",
+      "agent_metadata": {
+        "agent_id": "agent_0401k60ymzb7fjsacc9x98t875ye",
+        "workflow_node_id": null
+      },
+      "message": "Okay, voi face tot posibilul să...",
+      "multivoice_message": null,
+      "tool_calls": [],
+      "tool_results": [],
+      "feedback": null,
+      "llm_override": null,
+      "time_in_call_secs": 37,
+      "conversation_turn_metrics": {
+        "metrics": {
+          "convai_llm_service_tt_last_sentence": {
+            "elapsed_time": 0.7649293200011016
+          },
+          "convai_llm_service_ttf_sentence": {
+            "elapsed_time": 0.5104881630013551
+          },
+          "convai_tts_service_ttfb": {
+            "elapsed_time": 0.25663563600028283
+          },
+          "convai_llm_service_ttfb": {
+            "elapsed_time": 0.34659732399995846
+          }
+        }
+      },
+      "rag_retrieval_info": null,
+      "llm_usage": {
+        "model_usage": {
+          "gemini-2.0-flash": {
+            "input": {
+              "tokens": 824,
+              "price": 8.240000000000001e-05
+            },
+            "input_cache_read": {
+              "tokens": 0,
+              "price": 0.0
+            },
+            "input_cache_write": {
+              "tokens": 0,
+              "price": 0.0
+            },
+            "output_total": {
+              "tokens": 57,
+              "price": 2.2800000000000002e-05
+            }
+          }
+        }
+      },
+      "interrupted": true,
+      "original_message": "Okay, voi face tot posibilul să continui interviul în română. Te rog să ai în vedere că răspunsurile mele ar putea să nu fie la fel de precise sau nuanțate ca în engleză. Ești pregătit să începem?\n",
+      "source_medium": null
+    },
+    {
+      "role": "user",
+      "agent_metadata": null,
+      "message": "Yeah, yeah.",
+      "multivoice_message": null,
+      "tool_calls": [],
+      "tool_results": [],
+      "feedback": null,
+      "llm_override": null,
+      "time_in_call_secs": 39,
+      "conversation_turn_metrics": {
+        "metrics": {
+          "convai_asr_trailing_service_latency": {
+            "elapsed_time": 0.22447127099985664
+          }
+        }
+      },
+      "rag_retrieval_info": null,
+      "llm_usage": null,
+      "interrupted": false,
+      "original_message": null,
+      "source_medium": "audio"
+    },
+    {
+      "role": "agent",
+      "agent_metadata": {
+        "agent_id": "agent_0401k60ymzb7fjsacc9x98t875ye",
+        "workflow_node_id": null
+      },
+      "message": "Alright, let's get back to the assessment then. As a founder...",
+      "multivoice_message": null,
+      "tool_calls": [],
+      "tool_results": [],
+      "feedback": null,
+      "llm_override": null,
+      "time_in_call_secs": 40,
+      "conversation_turn_metrics": {
+        "metrics": {
+          "convai_llm_service_tt_last_sentence": {
+            "elapsed_time": 0.6711331870010326
+          },
+          "convai_llm_service_ttf_sentence": {
+            "elapsed_time": 0.5168024440008594
+          },
+          "convai_tts_service_ttfb": {
+            "elapsed_time": 0.19994988200051012
+          },
+          "convai_llm_service_ttfb": {
+            "elapsed_time": 0.32245044100091036
+          }
+        }
+      },
+      "rag_retrieval_info": null,
+      "llm_usage": {
+        "model_usage": {
+          "gemini-2.0-flash": {
+            "input": {
+              "tokens": 837,
+              "price": 8.37e-05
+            },
+            "input_cache_read": {
+              "tokens": 0,
+              "price": 0.0
+            },
+            "input_cache_write": {
+              "tokens": 0,
+              "price": 0.0
+            },
+            "output_total": {
+              "tokens": 48,
+              "price": 1.9200000000000003e-05
+            }
+          }
+        }
+      },
+      "interrupted": true,
+      "original_message": "Alright, let's get back to the assessment then. As a founder in the fintech space, you're likely facing a lot of pressure. Can you describe a time when you were under extreme pressure and how you handled it?\n",
+      "source_medium": null
+    }
+  ],
+  "metadata": {
+    "start_time_unix_secs": 1758821542,
+    "accepted_time_unix_secs": 1758821545,
+    "call_duration_secs": 46,
+    "cost": 263,
+    "deletion_settings": {
+      "deletion_time_unix_secs": null,
+      "deleted_logs_at_time_unix_secs": null,
+      "deleted_audio_at_time_unix_secs": null,
+      "deleted_transcript_at_time_unix_secs": null,
+      "delete_transcript_and_pii": false,
+      "delete_audio": false
+    },
+    "feedback": {
+      "overall_score": null,
+      "likes": 0,
+      "dislikes": 0
+    },
+    "authorization_method": "authorization_header",
+    "charging": {
+      "dev_discount": true,
+      "is_burst": false,
+      "tier": "free",
+      "llm_usage": {
+        "irreversible_generation": {
+          "model_usage": {
+            "gemini-2.0-flash": {
+              "input": {
+                "tokens": 3135,
+                "price": 0.0003135
+              },
+              "input_cache_read": {
+                "tokens": 0,
+                "price": 0.0
+              },
+              "input_cache_write": {
+                "tokens": 0,
+                "price": 0.0
+              },
+              "output_total": {
+                "tokens": 205,
+                "price": 8.200000000000001e-05
+              }
+            }
+          }
+        },
+        "initiated_generation": {
+          "model_usage": {
+            "gemini-2.0-flash": {
+              "input": {
+                "tokens": 3892,
+                "price": 0.00038920000000000003
+              },
+              "input_cache_read": {
+                "tokens": 0,
+                "price": 0.0
+              },
+              "input_cache_write": {
+                "tokens": 0,
+                "price": 0.0
+              },
+              "output_total": {
+                "tokens": 249,
+                "price": 9.960000000000001e-05
+              }
+            }
+          }
+        }
+      },
+      "llm_price": 0.0004888000000000001,
+      "llm_charge": 5,
+      "call_charge": 258,
+      "free_minutes_consumed": 0.0,
+      "free_llm_dollars_consumed": 0.0
+    },
+    "phone_call": null,
+    "batch_call": null,
+    "termination_reason": "Client disconnected: 1005",
+    "error": null,
+    "main_language": "en",
+    "rag_usage": null,
+    "text_only": false,
+    "features_usage": {
+      "language_detection": {
+        "enabled": false,
+        "used": false
+      },
+      "transfer_to_agent": {
+        "enabled": false,
+        "used": false
+      },
+      "transfer_to_number": {
+        "enabled": false,
+        "used": false
+      },
+      "multivoice": {
+        "enabled": false,
+        "used": false
+      },
+      "dtmf_tones": {
+        "enabled": false,
+        "used": false
+      },
+      "external_mcp_servers": {
+        "enabled": false,
+        "used": false
+      },
+      "pii_zrm_workspace": false,
+      "pii_zrm_agent": false,
+      "tool_dynamic_variable_updates": {
+        "enabled": false,
+        "used": false
+      },
+      "is_livekit": false,
+      "voicemail_detection": {
+        "enabled": false,
+        "used": false
+      },
+      "workflow": {
+        "enabled": false,
+        "tool_node": {
+          "enabled": false,
+          "used": false
+        }
+      },
+      "agent_testing": {
+        "enabled": false,
+        "tests_ran_after_last_modification": false,
+        "tests_ran_in_last_7_days": false
+      }
+    },
+    "eleven_assistant": {
+      "is_eleven_assistant": false
+    },
+    "initiator_id": "tuoFLdj49hdICpl9z6wREjkbXLm1",
+    "conversation_initiation_source": "react_sdk",
+    "conversation_initiation_source_version": "0.5.0",
+    "timezone": null
+  },
+  "analysis": {
+    "evaluation_criteria_results": {},
+    "data_collection_results": {},
+    "call_successful": "success",
+    "transcript_summary": "The user started with an offensive comment, which the agent deflected, redirecting to the interview. The user then inquired about Romanian language support, and after the agent explained its capabilities, the user requested the interview be conducted in Romanian. The agent agreed, then the user told the agent to proceed.\n",
+    "call_summary_title": "Interview language switch attempt"
+  },
+  "conversation_initiation_client_data": {
+    "conversation_config_override": {
+      "tts": {
+        "voice_id": null,
+        "stability": null,
+        "speed": null,
+        "similarity_boost": null
+      },
+      "conversation": {
+        "text_only": null
+      },
+      "agent": {
+        "first_message": null,
+        "language": null,
+        "prompt": null
+      }
+    },
+    "custom_llm_extra_body": {},
+    "user_id": "tuoFLdj49hdICpl9z6wREjkbXLm1",
+    "source_info": {
+      "source": "react_sdk",
+      "version": "0.5.0"
+    },
+    "dynamic_variables": {
+      "system__agent_id": "agent_0401k60ymzb7fjsacc9x98t875ye",
+      "system__timezone": null,
+      "system__caller_id": null,
+      "system__time_utc": "2025-09-25T17:33:08.540293+00:00",
+      "system__call_sid": null,
+      "system__called_number": null,
+      "system__time": "Thursday, 17:33 25 September 2025",
+      "system__conversation_id": "conv_7301k60yxt5kft69qgswea2x3cbn",
+      "system__call_duration_secs": 46,
+      "system__current_agent_id": "agent_0401k60ymzb7fjsacc9x98t875ye"
+    }
+  },
+  "has_audio": true,
+  "has_user_audio": true,
+  "has_response_audio": true
+}

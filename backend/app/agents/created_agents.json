@@ -1,0 +1,58 @@
+[
+  {
+    "agent_id": "agent_5101k60qnf5jesv8300p4x8xh86e",
+    "created_at": "2025-09-25T17:25:30.465150",
+    "user_data": {
+      "name": "Customer Support Agent",
+      "tags": [
+        "customer-service",
+        "support"
+      ],
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "language": "en",
+      "personality": "professional and helpful customer service representative",
+      "conversation_config": {
+        "max_duration": 600,
+        "greeting": "Hello! How can I assist you today?",
+        "response_style": "concise and informative"
+      }
+    },
+    "conversation_config": {
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "language": "en",
+      "personality": "professional and helpful customer service representative",
+      "max_duration": 600,
+      "greeting": "Hello! How can I assist you today?",
+      "response_style": "concise and informative"
+    },
+    "conversations": [
+      {
+        "signed_url": "wss://api.elevenlabs.io/v1/convai/conversation?agent_id=agent_5101k60qnf5jesv8300p4x8xh86e&conversation_signature=cvtkn_8301k60qng70f168v1pba4yy6zgf&conversation_id=conv_1401k60qng6zf77rk6q2yt9p9fah",
+        "created_at": "2025-09-25T17:25:30.710375",
+        "single_use": true,
+        "conversation_id": null
+      }
+    ]
+  },
+  {
+    "agent_id": "agent_3001k60qnghre5sb83btar8h0afd",
+    "created_at": "2025-09-25T17:25:31.948343",
+    "user_data": {
+      "name": "Sales Assistant",
+      "personality": "persuasive and friendly sales professional",
+      "language": "en"
+    },
+    "conversation_config": {
+      "language": "en",
+      "personality": "persuasive and friendly sales professional"
+    },
+    "conversations": [
+      {
+        "signed_url": "wss://api.elevenlabs.io/v1/convai/conversation?agent_id=agent_3001k60qnghre5sb83btar8h0afd&conversation_signature=cvtkn_8001k60qnhnnfcjtet4wrqwsrj3n",
+        "created_at": "2025-09-25T17:25:32.197078",
+        "single_use": false,
+        "conversation_id": null
+      }
+    ]
+  }
+]

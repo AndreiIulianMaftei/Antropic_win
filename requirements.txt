@@ -1,5 +1,5 @@
 bey
-python-dotenv
+python-dotenv>=1.0.0
 livekit-plugins-bey
 livekit-api
 flask>=2.3.0

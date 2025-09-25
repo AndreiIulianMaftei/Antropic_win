@@ -1,0 +1,8 @@
+Use the OpenAlex MCP toolset to search for and return metrics for the following author:
+Author Name: {author_name}
+Affiliation (if specified): {affiliation}
+
+Please ensure you:
+1. Search for the author by name
+2. If affiliation is specified, filter by that affiliation
+3. Return complete metrics for the most relevant author match

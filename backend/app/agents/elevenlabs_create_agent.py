@@ -52,6 +52,18 @@ class ElevenLabsAgentCreator:
             "agent_id": agent_id
         }
     
+    def save_agent_id_to_file(self, agent_id: str, filename: str = "agent_ids.txt") -> str:
+        """Save agent ID to text file"""
+        from datetime import datetime
+        
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        entry = f"{timestamp} - {agent_id}\n"
+        
+        with open(filename, 'a', encoding='utf-8') as f:
+            f.write(entry)
+        
+        return filename
+    
     def delete_all_conversations(self) -> Dict[str, int]:
         """Delete all conversations and return summary"""
         # Get all conversations
@@ -132,9 +144,13 @@ def main(txt_file_path: str) -> Dict[str, str]:
         print(f"📖 Creating agent from: {txt_file_path}")
         result = creator.create_agent(instructions, "Custom Agent")
         
+        # Save agent ID to file
+        id_file = creator.save_agent_id_to_file(result['agent_id'])
+        
         print(f"✅ Agent created!")
         print(f"🌐 Link: {result['web_link']}")
         print(f"🆔 ID: {result['agent_id']}")
+        print(f"💾 ID saved to: {id_file}")
         
         return result
         
@@ -150,5 +166,5 @@ if __name__ == "__main__":
         sys.exit(1)
     
     result = main(sys.argv[1])
-    
+
     print(f"\n📋 Result: {result}")

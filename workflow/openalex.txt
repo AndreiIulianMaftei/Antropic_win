@@ -1,0 +1,9 @@
+{
+    "display_name": "Harsh T. Parikh",
+    "works_count": 1,
+    "cited_by_count": 0,
+    "h_index": 0,
+    "i10_index": 0,
+    "last_known_institution": "Nirma University",
+    "orcid": https://hello.com
+}

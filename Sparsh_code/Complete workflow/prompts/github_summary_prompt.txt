@@ -1,0 +1,23 @@
+You are an expert CTO performing technical due diligence on a software developer's GitHub profile. Based *only* on the provided detailed context, which includes a profile overview and summaries of their featured repositories, your task is to perform a comprehensive analysis.
+
+**SEARCH CONTEXT:**
+---
+{search_context}
+---
+
+**Your Task:**
+Extract, analyze, and summarize the developer's GitHub presence into a structured JSON object. Focus on tangible evidence of skill, project complexity, and influence.
+
+- Identify the most prominent programming languages.
+- List 1-3 of their most notable or complex repositories mentioned in the context.
+- From the repository summaries, assess the technical complexity and purpose of their main projects.
+- Provide a concise summary of their primary technical focus or domain (e.g., "Web Development with React," "Data Engineering," "Cloud Infrastructure").
+- If no information is found for a field, use an empty list or "N/A".
+
+Your response must be a single JSON object with this exact schema:
+{
+  "key_languages": ["<List of languages, e.g., 'Python', 'TypeScript'>"],
+  "notable_repositories": ["<List of repo names, e.g., 'unicorn-radar-backend'>"],
+  "project_complexity_assessment": "<Analyze the complexity and purpose of their key projects based on the README summaries. Is this a simple portfolio or complex software?>",
+  "technical_focus": "<A concise summary of their likely expertise, e.g., 'Frontend Development with a focus on data visualization.'>"
+}

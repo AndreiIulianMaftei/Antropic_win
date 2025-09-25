@@ -1,3 +1,4 @@
 bey
 python-dotenv
 livekit-plugins-bey
+livekit-api

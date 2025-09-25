@@ -1,0 +1,259 @@
+{
+  "id": "2",
+  "type": "prospects",
+  "data": {
+    "startupInfo": {
+      "name": "DeepResearch AI"
+    },
+    "teamList": [
+      {
+        "id": "1",
+        "name": "Yann LeCun",
+        "github": "https://github.com/karpathy",
+        "linkedin": "https://www.linkedin.com/in/yann-lecun/",
+        "university": "New York University",
+        "analysis": {
+          "linkedin_analysis": {
+            "error": "'url'"
+          },
+          "github_analysis": {
+            "User_Profile": "A prominent AI researcher and educator specializing in deep learning, known for creating minimalistic, educational implementations of neural networks and LLMs.",
+            "key_languages": [
+              "Python",
+              "C/CUDA",
+              "JavaScript"
+            ],
+            "notable_repositories": [
+              "nanoGPT",
+              "llm.c",
+              "micrograd"
+            ],
+            "project_complexity_assessment": "The projects exhibit high technical complexity, focusing on from-scratch implementations of advanced concepts like autograd engines, GPT training pipelines, and raw C/CUDA for LLM inference and training. These are not simple portfolios but sophisticated, educational tools reproducing state-of-the-art models like GPT-2/3 with minimal dependencies, emphasizing performance, readability, and low-level understanding.",
+            "technical_focus": "Deep Learning and Neural Networks, particularly educational implementations of transformers, LLMs, and cryptographic primitives for Bitcoin."
+          },
+          "openalex_analysis": {
+            "author_metrics": {
+              "openalex_id": "https://openalex.org/A5001226970",
+              "display_name": "Yann LeCun",
+              "works_count": 517,
+              "cited_by_count": 242166,
+              "h_index": 126,
+              "i10_index": 302,
+              "last_known_institution": "Courant Institute of Mathematical Sciences",
+              "orcid": null
+            },
+            "top_publications": [
+              {
+                "title": "Deep learning",
+                "abstract": "Abstract not available.",
+                "cited_by_count": 71125
+              },
+              {
+                "title": "Gradient-based learning applied to document recognition",
+                "abstract": "Multilayer neural networks trained with the back-propagation algorithm constitute the best example of a successful gradient based learning technique. Given an appropriate network architecture, gradient-based learning algorithms can be used to synthesize a complex decision surface that can classify high-dimensional patterns, such as handwritten characters, with minimal preprocessing. This paper reviews various methods applied to handwritten character recognition and compares them on a standard handwritten digit recognition task. Convolutional neural networks, which are specifically designed to deal with the variability of 2D shapes, are shown to outperform all other techniques. Real-life document recognition systems are composed of multiple modules including field extraction, segmentation recognition, and language modeling. A new learning paradigm, called graph transformer networks (GTN), allows such multimodule systems to be trained globally using gradient-based methods so as to minimize an overall performance measure. Two systems for online handwriting recognition are described. Experiments demonstrate the advantage of global training, and the flexibility of graph transformer networks. A graph transformer network for reading a bank cheque is also described. It uses convolutional neural network character recognizers combined with global training techniques to provide record accuracy on business and personal cheques. It is deployed commercially and reads several million cheques per day.",
+                "cited_by_count": 52846
+              },
+              {
+                "title": "Backpropagation Applied to Handwritten Zip Code Recognition",
+                "abstract": "The ability of learning networks to generalize can be greatly enhanced by providing constraints from the task domain. This paper demonstrates how such constraints can be integrated into a backpropagation network through the architecture of the network. This approach has been successfully applied to the recognition of handwritten zip code digits provided by the U.S. Postal Service. A single network learns the entire recognition operation, going from the normalized image of the character to the final classification.",
+                "cited_by_count": 11115
+              },
+              {
+                "title": "Dimensionality Reduction by Learning an Invariant Mapping",
+                "abstract": "Dimensionality reduction involves mapping a set of high dimensional input points onto a low dimensional manifold so that 'similar\" points in input space are mapped to nearby points on the manifold. We present a method - called Dimensionality Reduction by Learning an Invariant Mapping (DrLIM) - for learning a globally coherent nonlinear function that maps the data evenly to the output manifold. The learning relies solely on neighborhood relationships and does not require any distancemeasure in the input space. The method can learn mappings that are invariant to certain transformations of the inputs, as is demonstrated with a number of experiments. Comparisons are made to other techniques, in particular LLE.",
+                "cited_by_count": 4723
+              },
+              {
+                "title": "Convolutional networks for images, speech, and time series",
+                "abstract": "Abstract not available.",
+                "cited_by_count": 3952
+              },
+              {
+                "title": "Learning a Similarity Metric Discriminatively, with Application to Face Verification",
+                "abstract": "We present a method for training a similarity metric from data. The method can be used for recognition or verification applications where the number of categories is very large and not known during training, and where the number of training samples for a single category is very small. The idea is to learn a function that maps input patterns into a target space such that the L/sub 1/ norm in the target space approximates the \"semantic\" distance in the input space. The method is applied to a face verification task. The learning process minimizes a discriminative loss function that drives the similarity metric to be small for pairs of faces from the same person, and large for pairs from different persons. The mapping from raw to the target space is a convolutional network whose architecture is designed for robustness to geometric distortions. The system is tested on the Purdue/AR face database which has a very high degree of variability in the pose, lighting, expression, position, and artificial occlusions such as dark glasses and obscuring scarves.",
+                "cited_by_count": 3645
+              },
+              {
+                "title": "OverFeat: Integrated Recognition, Localization and Detection using Convolutional Networks",
+                "abstract": "Abstract: We present an integrated framework for using Convolutional Networks for classification, localization and detection. We show how a multiscale and sliding window approach can be efficiently implemented within a ConvNet. We also introduce a novel deep learning approach to localization by learning to predict object boundaries. Bounding boxes are then accumulated rather than suppressed in order to increase detection confidence. We show that different tasks can be learned simultaneously using a single shared network. This integrated framework is the winner of the localization task of the ImageNet Large Scale Visual Recognition Challenge 2013 (ILSVRC2013) and obtained very competitive results for the detection and classifications tasks. In post-competition work, we establish a new state of the art for the detection task. Finally, we release a feature extractor from our best model called OverFeat.",
+                "cited_by_count": 3575
+              },
+              {
+                "title": "Handwritten Digit Recognition with a Back-Propagation Network",
+                "abstract": "We present an application of back-propagation networks to handwritten digit recognition. Minimal preprocessing of the data was required, but architecture of the network was highly constrained and specifically designed for the task. The input of the network consists of normalized images of isolated digits. The method has 1% error rate and about a 9% reject rate on zipcode digits provided by the U.S. Postal Service.",
+                "cited_by_count": 3314
+              },
+              {
+                "title": "Geometric Deep Learning: Going beyond Euclidean data",
+                "abstract": "Many scientific fields study data with an underlying structure that is a non-Euclidean space. Some examples include social networks in computational social sciences, sensor networks in communications, functional networks in brain imaging, regulatory networks in genetics, and meshed surfaces in computer graphics. In many applications, such geometric data are large and complex (in the case of social networks, on the scale of billions), and are natural targets for machine learning techniques. In particular, we would like to use deep neural networks, which have recently proven to be powerful tools for a broad range of problems from computer vision, natural language processing, and audio analysis. However, these tools have been most successful on data with an underlying Euclidean or grid-like structure, and in cases where the invariances of these structures are built into networks used to model them. Geometric deep learning is an umbrella term for emerging techniques attempting to generalize (structured) deep neural models to non-Euclidean domains such as graphs and manifolds. The purpose of this paper is to overview different examples of geometric deep learning problems and present available solutions, key difficulties, applications, and future research directions in this nascent field.",
+                "cited_by_count": 3303
+              },
+              {
+                "title": "A Closer Look at Spatiotemporal Convolutions for Action Recognition",
+                "abstract": "In this paper we discuss several forms of spatiotemporal convolutions for video analysis and study their effects on action recognition. Our motivation stems from the observation that 2D CNNs applied to individual frames of the video have remained solid performers in action recognition. In this work we empirically demonstrate the accuracy advantages of 3D CNNs over 2D CNNs within the framework of residual learning. Furthermore, we show that factorizing the 3D convolutional filters into separate spatial and temporal components yields significantly gains in accuracy. Our empirical study leads to the design of a new spatiotemporal convolutional block \"R(2+1)D\" which produces CNNs that achieve results comparable or superior to the state-of-the-art on Sports-1M, Kinetics, UCF101, and HMDB51.",
+                "cited_by_count": 3174
+              }
+            ]
+          }
+        },
+        "interview_analysis": {
+          "id": "1",
+          "data": {
+            "success": true,
+            "compatibility_analysis": {
+              "overall_compatibility_score": 72,
+              "detailed_scores": {
+                "vision_alignment": {
+                  "score": 75,
+                  "analysis": "Mark Julius demonstrates a clear vision for sustainable local food distribution through community-supported agriculture platforms. His passion for connecting local farmers with urban consumers shows strong directional clarity and market understanding."
+                },
+                "complementary_skills": {
+                  "score": 80,
+                  "analysis": "Mark brings strong community engagement and relationship-building skills, with deep knowledge of agricultural supply chains. His non-technical background complements technical co-founders well, providing essential business development and market validation expertise."
+                },
+                "communication_style": {
+                  "score": 85,
+                  "analysis": "Mark communicates with enthusiasm and clarity, able to explain complex agricultural concepts in accessible terms. His storytelling ability and passion for the mission create compelling narratives for stakeholders and investors."
+                },
+                "work_style_compatibility": {
+                  "score": 65,
+                  "analysis": "Mark prefers collaborative, relationship-driven approaches to problem-solving. He values consensus-building and community input, which may sometimes slow decision-making but ensures thorough stakeholder buy-in."
+                },
+                "leadership_dynamics": {
+                  "score": 70,
+                  "analysis": "Mark naturally gravitates toward external-facing leadership roles, excelling in community outreach, partnership development, and public representation. He shows comfort with shared leadership models and delegation of technical decisions."
+                }
+              },
+              "strengths": [
+                "Deep understanding of agricultural markets and farmer needs",
+                "Strong community connections and relationship-building skills",
+                "Clear vision for sustainable food systems",
+                "Excellent communication and storytelling abilities",
+                "Natural ability to bridge technical and non-technical stakeholders"
+              ],
+              "challenges": [
+                "Limited technical background may create communication gaps with developers",
+                "Preference for consensus-building could slow rapid decision-making",
+                "May underestimate technical complexity and development timelines",
+                "Risk of over-promising to community partners without technical validation"
+              ],
+              "recommendations": {
+                "partnership_viability": "HIGH",
+                "key_actions": [
+                  "Establish clear communication protocols between business and technical teams",
+                  "Create regular market validation cycles to align technical development with user needs",
+                  "Implement structured decision-making processes that balance consensus with speed",
+                  "Develop technical literacy to better understand development constraints and opportunities"
+                ],
+                "red_flags": [
+                  "None identified - strong overall compatibility profile"
+                ]
+              },
+              "executive_summary": "Mark Julius presents as a highly compatible co-founder candidate with strong vision alignment, excellent communication skills, and valuable non-technical expertise that complements technical founders well. His deep market knowledge and community connections provide significant value, though attention should be paid to bridging technical-business communication gaps.",
+              "metadata": {
+                "model_used": "claude-sonnet-4",
+                "analysis_timestamp": "2025-09-25T18:42:15.123456",
+                "founder_id": "Mark Julius",
+                "assessment_type": "individual_profile"
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "2",
+        "name": "Sheryl Sandberg",
+        "github": "",
+        "linkedin": "https://www.linkedin.com/in/sherylsandberg/",
+        "university": "Harvard University",
+        "analysis": {
+          "linkedin_analysis": {
+            "error": "'url'"
+          },
+          "openalex_analysis": {
+            "author_metrics": {
+              "openalex_id": "https://openalex.org/A5003577661",
+              "display_name": "Sheryl Sandberg",
+              "works_count": 1,
+              "cited_by_count": 169,
+              "h_index": 1,
+              "i10_index": 1,
+              "last_known_institution": null,
+              "orcid": null
+            },
+            "top_publications": [
+              {
+                "title": "Lean in - Women, Work and the Will to Lead",
+                "abstract": "Abstract not available.",
+                "cited_by_count": 169
+              }
+            ]
+          }
+        },
+        "interview_analysis": {
+          "id": "2",
+          "data": {
+            "success": true,
+            "compatibility_analysis": {
+              "overall_compatibility_score": 35,
+              "detailed_scores": {
+                "vision_alignment": {
+                  "score": 20,
+                  "analysis": "Founder 1's vision is unclear and shifts between AI shoes and seemingly unrelated technologies. Founder 2's vision is equally vague, focusing on a 'blue ocean' without specifics."
+                },
+                "complementary_skills": {
+                  "score": 60,
+                  "analysis": "Founder 1 possesses technical skills in robotics, while Founder 2 claims business expertise. However, the descriptions are superficial, and the actual complementarity is questionable."
+                },
+                "communication_style": {
+                  "score": 40,
+                  "analysis": "Founder 1's communication is hesitant and unclear, struggling to articulate thoughts concisely. Founder 2's responses are brief and lack depth, hindering effective dialogue."
+                },
+                "work_style_compatibility": {
+                  "score": 20,
+                  "analysis": "Founder 1's desire to remove Founder 2 reveals significant underlying conflict and incompatibility in work styles.  Their conflict resolution strategies are simplistic and lack depth."
+                },
+                "leadership_dynamics": {
+                  "score": 50,
+                  "analysis": "The responses suggest a potential power imbalance, with Founder 1's technical expertise being perceived as more critical to the product.  Lack of clear leadership roles is a concern."
+                }
+              },
+              "strengths": [
+                "Technical expertise in robotics (Founder 1)",
+                "Potential for business acumen (Founder 2)",
+                "Willingness to engage in a co-founder assessment"
+              ],
+              "challenges": [
+                "Significant underlying conflict between founders",
+                "Unclear vision and poorly defined roles",
+                "Poor communication and articulation of ideas",
+                "Unequal perceived importance of founders' contributions"
+              ],
+              "recommendations": {
+                "partnership_viability": "LOW",
+                "key_actions": [
+                  "Mediated conflict resolution session",
+                  "Clearly define roles, responsibilities, and equity",
+                  "Develop a detailed business plan with clear milestones and metrics"
+                ],
+                "red_flags": [
+                  "Founder 1's desire to remove Founder 2",
+                  "Vague and shifting vision for the company"
+                ]
+              },
+              "executive_summary": "The co-founders demonstrate low compatibility due to significant underlying conflict, unclear vision, and poor communication.  The partnership is not recommended in its current state and requires substantial intervention to address fundamental issues.",
+              "metadata": {
+                "model_used": "gemini-1.5-flash",
+                "analysis_timestamp": "2025-09-25T16:36:23.869351",
+                "founder1_id": "Founder 1",
+                "founder2_id": "Founder 2"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "received_at": "2025-09-25T14:48:08.884723",
+  "analyzed_at": 31865.236870262
+}

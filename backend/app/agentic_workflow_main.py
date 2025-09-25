@@ -6,8 +6,9 @@ from dotenv import load_dotenv
 
 # Imports from other files in the project
 from core.workflow import FounderAnalysisOrchestrator
+from agents.analysis_report_agent import create_analysis_agent, run_analysis_agent
 
-async def main():
+async def main(input_file = "sample_frontend_input.json", interview_file = "sample_interview_analysis_input.json"):
     """
     Main execution function to run the founder analysis workflow.
     """
@@ -22,7 +23,7 @@ async def main():
         raise ValueError("One or more required environment variables (API_KEY, TAVILY_API_KEY, LINKEDIN_COOKIE) are missing from your .env file.")
 
     # Define the input file path
-    input_file = "sample_frontend_input.json"
+    
 
     # Load the input JSON from the frontend
     if not os.path.exists(input_file):
@@ -40,6 +41,14 @@ async def main():
     
     final_output = await orchestrator.run(prospect_data)
 
+    with open(interview_file, "r") as f:
+        interview_data = json.load(f)
+    inter_dict = {item["id"]: item for item in interview_data}
+
+
+
+    for founder in final_output["data"]["teamList"]:
+        founder["interview_analysis"] = inter_dict[founder["id"]]
     # Print the final, enriched JSON to the console
     print("\n\n--- FINAL ENRICHED OUTPUT FOR FRONTEND ---")
     print(json.dumps(final_output, indent=2))
@@ -49,10 +58,20 @@ async def main():
     with open(output_file, "w") as f:
         json.dump(final_output, f, indent=2)
     print(f"\nOutput saved to {output_file}")
+    a_agent = create_analysis_agent()
+    report = await run_analysis_agent(a_agent, json.dumps(final_output["data"]["teamList"]))
+    print("\n\n--- ANALYSIS REPORT ---")
+    report_json = report.dict()
+    print(json.dumps(report_json, indent=2))
+    report_file = "analysis_report.json"
+    with open(report_file, "w") as f:
+        json.dump(report_json, f, indent=2)
+    print(f"\nReport saved to {report_file}")
 
 if __name__ == "__main__":
     # Create a sample input file for testing if it doesn't exist
     input_filename = "sample_frontend_input.json"
+    interview_input_filename = "sample_interview_input.json"
     if not os.path.exists(input_filename):
         print(f"Creating sample input file: {input_filename}")
         sample_data = {
@@ -84,3 +103,5 @@ if __name__ == "__main__":
             
     # Run the main asynchronous event loop
     asyncio.run(main())
+
+

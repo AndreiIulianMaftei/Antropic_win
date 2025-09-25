@@ -6,68 +6,50 @@ from src.core.base_agent import BaseAgent
 
 class TechProfileAssessorAgent(BaseAgent):
     """
-    Analyzes and scores a technical founder's profile based on objective criteria.
+    Analyzes a technical founder's profile from a consolidated research dossier.
     """
-    def assess(self, gscholar_data: dict | None, github_data: dict | None) -> dict:
+    def assess(self, research_context: str) -> dict:
         """
-        Performs a quantitative and qualitative assessment of a technical profile.
-
-        Args:
-            gscholar_data (dict | None): Parsed data from a Google Scholar profile.
-            github_data (dict | None): Parsed data from a GitHub profile.
-
-        Returns:
-            A dictionary containing scores and a summary.
+        Performs assessment based on a rich text context from the research agent.
         """
-        print("Agent [TechAssessor]: Assessing technical profile...")
+        print("Agent [TechAssessor]: Assessing technical profile from research dossier...")
         
-        scores = {}
-        # --- H-Index Scoring (Academic Impact) ---
-        h_index = (gscholar_data or {}).get("h_index", 0)
-        if h_index >= 30: scores["academic_impact_score"] = {"value": 10, "grade": "A", "note": "Exceptional academic influence."}
-        elif h_index >= 20: scores["academic_impact_score"] = {"value": 9, "grade": "A-", "note": "Very strong academic influence."}
-        elif h_index >= 10: scores["academic_impact_score"] = {"value": 8, "grade": "B+", "note": "Significant academic influence."}
-        elif h_index >= 5:  scores["academic_impact_score"] = {"value": 7, "grade": "B", "note": "Established academic record."}
-        else:               scores["academic_impact_score"] = {"value": 5, "grade": "C", "note": "Early-stage academic record."}
+        prompt = f"""
+        You are a seasoned CTO performing technical due diligence on a founder based *only* on the provided research dossier.
 
-        # --- GitHub Scoring (Engineering Influence) ---
-        total_stars = 0
-        if github_data and github_data.get("pinned_repositories"):
-            for repo in github_data["pinned_repositories"]:
-                total_stars += repo.get("stars", 0)
-        
-        if total_stars >= 1000: scores["engineering_influence_score"] = {"value": 10, "grade": "A", "note": "Highly influential open-source contributor."}
-        elif total_stars >= 500:  scores["engineering_influence_score"] = {"value": 9, "grade": "A-", "note": "Strong open-source presence."}
-        elif total_stars >= 100:  scores["engineering_influence_score"] = {"value": 8, "grade": "B+", "note": "Recognized contributions to open-source."}
-        elif total_stars >= 20:   scores["engineering_influence_score"] = {"value": 7, "grade": "B", "note": "Active and engaged in open-source."}
-        else:                     scores["engineering_influence_score"] = {"value": 5, "grade": "C", "note": "Personal or early-stage projects."}
+        **Research Dossier:**
+        ---
+        {research_context}
+        ---
 
-        # --- LLM-based Qualitative Summary ---
-        synthesis_prompt = self._create_synthesis_prompt(gscholar_data, github_data)
+        **Your Task:**
+        1.  Scour the dossier for any mention of GitHub projects, technical skills, or academic achievements (like an H-Index).
+        2.  Based *only* on the information present, provide a summary and scores.
+        3.  If specific information (like an H-Index or notable projects) is NOT found, explicitly state that and assign a neutral/low score for that category. Do not invent information.
+
+        Your response must be a single JSON object with this exact schema:
+        {{
+          "scores": {{
+            "academic_impact_score": {{
+              "value": "<Score 1-10. Score low (e.g., 5) if no academic record found.>",
+              "grade": "<A-F>",
+              "note": "<Justify your score, e.g., 'No publications or H-Index found in the provided context.'>"
+            }},
+            "engineering_influence_score": {{
+              "value": "<Score 1-10 based on GitHub projects, stars, or contributions found. Score low if not found.>",
+              "grade": "<A-F>",
+              "note": "<Justify your score, e.g., 'Found several relevant projects on GitHub like X and Y.'>"
+            }}
+          }},
+          "summary": {{
+            "domain_expertise": "<Identify their primary field of deep tech expertise based on the text>",
+            "impact_assessment": "<Provide a brief assessment of their potential for impactful work based on the dossier.>"
+          }}
+        }}
+        """
         messages = [
-            {"role": "system", "content": "You are a CTO evaluating a technical founder. Based on their profile data, provide a concise summary of their deep tech expertise and potential impact. Identify their core domain (e.g., AI/ML, Quantum Computing)."},
-            {"role": "user", "content": synthesis_prompt}
+            {"role": "system", "content": "You are a CTO evaluating a technical founder's dossier."},
+            {"role": "user", "content": prompt}
         ]
         
-        summary = self._send_llm_request(messages)
-
-        return {
-            "scores": scores,
-            "summary": summary or {"error": "Failed to generate summary."}
-        }
-
-    def _create_synthesis_prompt(self, gscholar_data, github_data):
-        prompt = "Synthesize the following technical profile data into a report.\\n\\n"
-        if gscholar_data:
-            prompt += f"**Google Scholar Profile:**\\n- H-Index: {gscholar_data.get('h_index')}\\n- Top Publication: {gscholar_data.get('top_publications', [{}])[0].get('title', 'N/A')}\\n\\n"
-        if github_data:
-            prompt += f"**GitHub Profile:**\\n- Bio: {github_data.get('bio')}\\n- Pinned Repositories exist: {bool(github_data.get('pinned_repositories'))}\\n\\n"
-        
-        prompt += """
-        Your response must be a JSON object with this schema:
-        {
-          "domain_expertise": "<Identify their primary field of deep tech expertise>",
-          "impact_assessment": "<Provide a brief assessment of their potential for impactful work.>"
-        }
-        """
-        return prompt
+        return self._send_llm_request(messages) or {"error": "Failed to generate assessment."}

@@ -6,68 +6,50 @@ from src.core.base_agent import BaseAgent
 
 class BusinessAcumenAssessorAgent(BaseAgent):
     """
-    Analyzes and scores a non-technical founder's profile for business acumen.
+    Analyzes a non-technical founder's profile from a consolidated research dossier.
     """
-    def assess(self, linkedin_data: dict | None) -> dict:
+    def assess(self, research_context: str) -> dict:
         """
-        Performs a quantitative and qualitative assessment of a business profile.
-        
-        Args:
-            linkedin_data (dict | None): Parsed data from a LinkedIn profile.
-
-        Returns:
-            A dictionary containing scores and a summary.
+        Performs assessment based on a rich text context from the research agent.
         """
-        print("Agent [BusinessAssessor]: Assessing business profile...")
-        if not linkedin_data or not linkedin_data.get("experience"):
-            return {"scores": {}, "summary": {"error": "LinkedIn data is missing or incomplete."}}
+        print("Agent [BusinessAssessor]: Assessing business profile from research dossier...")
         
-        scores = {}
-        
-        # --- Experience Scoring ---
-        # A simple scoring model: +3 for Founder/CEO roles, +2 for Director/VP, +1 for other senior roles
-        experience_score = 0
-        is_prior_founder = False
-        for exp in linkedin_data.get("experience", []):
-            role = exp.get("role", "").lower()
-            if "founder" in role or "chief executive officer" in role or "ceo" in role:
-                experience_score += 3
-                is_prior_founder = True
-            elif "director" in role or "vp" in role or "vice president" in role:
-                experience_score += 2
-            elif "manager" in role or "lead" in role or "head of" in role:
-                experience_score += 1
+        prompt = f"""
+        You are a Venture Partner evaluating a founder's business background based *only* on the provided research dossier.
 
-        if is_prior_founder:
-            scores["founder_experience_score"] = {"value": 10, "grade": "A", "note": "Has prior founding experience."}
-        else:
-            scores["founder_experience_score"] = {"value": 6, "grade": "C+", "note": "Appears to be a first-time founder."}
+        **Research Dossier:**
+        ---
+        {research_context}
+        ---
 
-        if experience_score >= 5:   scores["career_progression_score"] = {"value": 9, "grade": "A-", "note": "Demonstrates strong career progression and leadership."}
-        elif experience_score >= 3: scores["career_progression_score"] = {"value": 8, "grade": "B+", "note": "Solid track record of senior roles."}
-        else:                       scores["career_progression_score"] = {"value": 7, "grade": "B", "note": "Shows relevant professional experience."}
-        
-        # --- LLM-based Qualitative Summary ---
-        synthesis_prompt = f"""
-        Based on the following LinkedIn experience, provide a summary of this person's business acumen. Identify their likely core competency (e.g., Sales, Marketing, Operations, Product Management).
+        **Your Task:**
+        1.  Extract key experiences, previous companies, and indicators of leadership or founding experience.
+        2.  Based *only* on this information, provide a summary and scores.
+        3.  If you find evidence of prior founding experience, score that highly. If not, score it neutrally and note it. Do not invent information.
 
-        **Experience:**
-        {linkedin_data.get('experience')}
-
-        Your response must be a JSON object with this schema:
+        Your response must be a single JSON object with this exact schema:
         {{
-          "core_competency": "<Identified core business skill>",
-          "execution_capability_assessment": "<Briefly assess their potential to execute and lead a company.>"
+          "scores": {{
+            "founder_experience_score": {{
+              "value": "<Score 1-10. Score high (e.g., 9-10) for prior founding experience, low (e.g., 5-6) otherwise.>",
+              "grade": "<A-F>",
+              "note": "<e.g., 'Clear evidence of prior founding experience.' or 'Appears to be a first-time founder based on context.'>"
+            }},
+            "career_progression_score": {{
+              "value": "<Score 1-10 based on seniority of roles and quality of companies mentioned.>",
+              "grade": "<A-F>",
+              "note": "<Justify your score, e.g., 'Demonstrates strong career progression with leadership roles at notable companies.'>"
+            }}
+          }},
+          "summary": {{
+            "core_competency": "<Identify their likely core business skill (e.g., Sales, Marketing, Operations) from the text>",
+            "execution_capability_assessment": "<Briefly assess their potential to execute and lead a company.>"
+          }}
         }}
         """
         messages = [
-            {"role": "system", "content": "You are a VC analyst evaluating a founder's business background."},
-            {"role": "user", "content": synthesis_prompt}
+            {"role": "system", "content": "You are a VC Partner evaluating a business founder's dossier."},
+            {"role": "user", "content": prompt}
         ]
-
-        summary = self._send_llm_request(messages)
-
-        return {
-            "scores": scores,
-            "summary": summary or {"error": "Failed to generate summary."}
-        }
+        
+        return self._send_llm_request(messages) or {"error": "Failed to generate assessment."}

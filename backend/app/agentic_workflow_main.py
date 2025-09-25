@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 from core.workflow import FounderAnalysisOrchestrator
 from agents.analysis_report_agent import create_analysis_agent, run_analysis_agent
 
-async def main(input_file = "sample_frontend_input.json", interview_file = "sample_interview_analysis_input.json"):
+async def main(input_file = "output_samples/sample_frontend_input.json", interview_file = "output_samples/sample_interview_analysis_input.json"):
     """
     Main execution function to run the founder analysis workflow.
     """
@@ -54,7 +54,7 @@ async def main(input_file = "sample_frontend_input.json", interview_file = "samp
     print(json.dumps(final_output, indent=2))
 
     # Save the final output to a file
-    output_file = "final_analysis_output.json"
+    output_file = "output_samples/final_analysis_output.json"
     with open(output_file, "w") as f:
         json.dump(final_output, f, indent=2)
     print(f"\nOutput saved to {output_file}")
@@ -63,15 +63,15 @@ async def main(input_file = "sample_frontend_input.json", interview_file = "samp
     print("\n\n--- ANALYSIS REPORT ---")
     report_json = report.dict()
     print(json.dumps(report_json, indent=2))
-    report_file = "analysis_report.json"
+    report_file = "output_samples/analysis_report.json"
     with open(report_file, "w") as f:
         json.dump(report_json, f, indent=2)
     print(f"\nReport saved to {report_file}")
 
 if __name__ == "__main__":
     # Create a sample input file for testing if it doesn't exist
-    input_filename = "sample_frontend_input.json"
-    interview_input_filename = "sample_interview_input.json"
+    input_filename = "output_samples/sample_frontend_input.json"
+    interview_input_filename = "output_samples/sample_interview_input.json"
     if not os.path.exists(input_filename):
         print(f"Creating sample input file: {input_filename}")
         sample_data = {

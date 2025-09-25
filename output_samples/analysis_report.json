@@ -1,0 +1,16 @@
+{
+  "startup_name": "AI Shoes Platform",
+  "disruption_probability": 0.15,
+  "founders_synergy": 3.5,
+  "complementary_score": 4.0,
+  "founder_highlights": [
+    "Yann LeCun: World-renowned AI pioneer with 517 publications and 242k+ citations, h-index 126",
+    "LeCun: Created foundational work in CNNs, deep learning, and gradient-based learning",
+    "LeCun: Strong technical implementation skills (nanoGPT, micrograd, educational AI tools)",
+    "Sheryl Sandberg: Former Meta COO with proven business leadership at massive scale",
+    "Major red flag: Severe founder conflict - one founder wants to remove the other",
+    "Critical issue: Unclear and shifting vision between AI shoes and unrelated technologies",
+    "Poor communication dynamics and lack of aligned strategic direction",
+    "Significant mismatch between technical capabilities and business execution readiness"
+  ]
+}

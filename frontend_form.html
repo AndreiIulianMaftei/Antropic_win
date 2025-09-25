@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        input:focus, textarea:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        .required {
+            color: red;
+        }
+        .submit-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+        .submit-btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .message {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .profiles-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+        }
+        .profile-item {
+            background-color: #f8f9fa;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #007bff;
+        }
+        .profile-name {
+            font-weight: bold;
+            color: #333;
+        }
+        .profile-details {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+        .load-profiles-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+        .load-profiles-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📝 User Profile Submission</h1>
+        
+        <form id="profileForm">
+            <div class="form-group">
+                <label for="name">Full Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+                <label for="linkedin">LinkedIn URL</label>
+                <input type="url" id="linkedin" name="linkedin_url" placeholder="https://linkedin.com/in/yourprofile">
+            </div>
+
+            <div class="form-group">
+                <label for="github">GitHub URL</label>
+                <input type="url" id="github" name="github_url" placeholder="https://github.com/yourusername">
+            </div>
+
+            <div class="form-group">
+                <label for="university">Affiliated University</label>
+                <input type="text" id="university" name="university" placeholder="Enter your university name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="your.email@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="bio">Bio/Description</label>
+                <textarea id="bio" name="bio" placeholder="Brief description about yourself (optional)"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitBtn">Submit Profile</button>
+        </form>
+
+        <div id="message" class="message" style="display: none;"></div>
+
+        <div class="profiles-section">
+            <h2>📋 Existing Profiles</h2>
+            <button class="load-profiles-btn" onclick="loadProfiles()">Load Profiles</button>
+            <div id="profilesList"></div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE_URL = 'http://127.0.0.1:8001';
+
+        // Handle form submission
+        document.getElementById('profileForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const messageDiv = document.getElementById('message');
+            
+            // Disable submit button
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+            
+            // Get form data
+            const formData = new FormData(e.target);
+            const profileData = {};
+            
+            // Convert FormData to object, excluding empty values
+            for (let [key, value] of formData.entries()) {
+                if (value.trim() !== '') {
+                    profileData[key] = value.trim();
+                }
+            }
+            
+            try {
+                const response = await fetch(`${API_BASE_URL}/api/profile`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(profileData)
+                });
+
+                const result = await response.json();
+
+                if (response.ok && result.success) {
+                    showMessage(`✅ Profile created successfully! Profile ID: ${result.profile_id}`, 'success');
+                    document.getElementById('profileForm').reset();
+                    loadProfiles(); // Refresh the profiles list
+                } else {
+                    showMessage(`❌ Error: ${result.error || result.detail || 'Unknown error'}`, 'error');
+                }
+            } catch (error) {
+                showMessage(`❌ Network error: ${error.message}`, 'error');
+            } finally {
+                // Re-enable submit button
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit Profile';
+            }
+        });
+
+        // Show message function
+        function showMessage(text, type) {
+            const messageDiv = document.getElementById('message');
+            messageDiv.textContent = text;
+            messageDiv.className = `message ${type}`;
+            messageDiv.style.display = 'block';
+            
+            // Auto-hide success messages after 5 seconds
+            if (type === 'success') {
+                setTimeout(() => {
+                    messageDiv.style.display = 'none';
+                }, 5000);
+            }
+        }
+
+        // Load profiles function
+        async function loadProfiles() {
+            const profilesList = document.getElementById('profilesList');
+            profilesList.innerHTML = '<p>Loading profiles...</p>';
+            
+            try {
+                const response = await fetch(`${API_BASE_URL}/api/profiles`);
+                const result = await response.json();
+
+                if (response.ok && result.success) {
+                    if (result.profiles.length === 0) {
+                        profilesList.innerHTML = '<p>No profiles found.</p>';
+                    } else {
+                        profilesList.innerHTML = result.profiles.map(profile => `
+                            <div class="profile-item">
+                                <div class="profile-name">${profile.name}</div>
+                                <div class="profile-details">
+                                    University: ${profile.university || 'Not specified'} | 
+                                    Created: ${new Date(profile.created_at).toLocaleDateString()} |
+                                    ID: ${profile.profile_id}
+                                </div>
+                            </div>
+                        `).join('');
+                    }
+                } else {
+                    profilesList.innerHTML = '<p>❌ Error loading profiles</p>';
+                }
+            } catch (error) {
+                profilesList.innerHTML = `<p>❌ Network error: ${error.message}</p>`;
+            }
+        }
+
+        // Load profiles on page load
+        document.addEventListener('DOMContentLoaded', loadProfiles);
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+Please Enter the json/ output/ expected parameters for each step on this folder
+
+
+
+{
+  "id": "2",
+  "type": "prospects",
+  "data": {
+    "startupInfo": {
+      "name": "my startup",
+      "product": "good product",
+      "founded": "in 1989",
+      "mission": "cool mission",
+      "businessModel": "a good model",
+      "isManual": true
+    },
+    "teamList": [
+      {
+        "id": "1758804447769",
+        "name": "Karl von Gagern",
+        "email": "founder@startup.com",
+        "github": "https://github",
+        "linkedin": "oiwef",
+        "university": "University of Cambridge",
+        "notes": "cool cool"
+      },
+      {
+        "id": "1758804468618",
+        "name": "another founder",
+        "email": "mail@mail.com",
+        "github": "github",
+        "linkedin": "linkedin!",
+        "university": "Cornell University",
+        "notes": "cool!"
+      }
+    ]
+  },
+  "received_at": "2025-09-25T14:48:08.884723"
+}

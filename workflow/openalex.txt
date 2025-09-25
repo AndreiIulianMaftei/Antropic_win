@@ -1,0 +1,9 @@
+{
+    "display_name": "Yann LeCun",
+    "works_count": 517,
+    "cited_by_count": 242166,
+    "h_index": 126,
+    "i10_index": 302,
+    "last_known_institution": "Courant Institute of Mathematical Sciences",
+    "orcid": "https://orcid.org/0000-0002-1825-0097"
+}

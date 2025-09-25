@@ -1,0 +1,223 @@
+{
+    "author_metrics": {
+        "display_name": "Yann LeCun",
+        "works_count": 517,
+        "cited_by_count": 242166,
+        "h_index": 126,
+        "i10_index": 302,
+        "last_known_institution": "Courant Institute of Mathematical Sciences",
+        "orcid": null
+    },
+    "top_publications": [
+        {
+            "id": "https://openalex.org/W2919115771",
+            "title": "Deep learning",
+            "publication_date": "2015-05-26",
+            "publication_year": 2015,
+            "cited_by_count": 71125,
+            "doi": "https://doi.org/10.1038/nature14539",
+            "venue": null,
+            "venue_type": null,
+            "open_access": false,
+            "type": "review",
+            "concepts": [
+                "Computer science",
+                "Deep learning",
+                "Artificial intelligence",
+                "Abstraction",
+                "Representation (politics)"
+            ],
+            "abstract": null,
+            "has_abstract": false
+        },
+        {
+            "id": "https://openalex.org/W2112796928",
+            "title": "Gradient-based learning applied to document recognition",
+            "publication_date": "1998-01-01",
+            "publication_year": 1998,
+            "cited_by_count": 52846,
+            "doi": "https://doi.org/10.1109/5.726791",
+            "venue": null,
+            "venue_type": null,
+            "open_access": false,
+            "type": "article",
+            "concepts": [
+                "Computer science",
+                "Artificial intelligence",
+                "Convolutional neural network",
+                "Intelligent character recognition",
+                "Handwriting recognition"
+            ],
+            "abstract": "Multilayer neural networks trained with the back-propagation algorithm constitute the best example of a successful gradient based learning technique. Given an appropriate network architecture, gradient-based learning algorithms can be used to synthesize a complex decision surface that can classify high-dimensional patterns, such as handwritten characters, with minimal preprocessing. This paper reviews various methods applied to handwritten character recognition and compares them on a standard handwritten digit recognition task. Convolutional neural networks, which are specifically designed to deal with the variability of 2D shapes, are shown to outperform all other techniques. Real-life document recognition systems are composed of multiple modules including field extraction, segmentation recognition, and language modeling. A new learning paradigm, called graph transformer networks (GTN), allows such multimodule systems to be trained globally using gradient-based methods so as to minimize an overall performance measure. Two systems for online handwriting recognition are described. Experiments demonstrate the advantage of global training, and the flexibility of graph transformer networks. A graph transformer network for reading a bank cheque is also described. It uses convolutional neural network character recognizers combined with global training techniques to provide record accuracy on business and personal cheques. It is deployed commercially and reads several million cheques per day.",
+            "has_abstract": true
+        },
+        {
+            "id": "https://openalex.org/W2147800946",
+            "title": "Backpropagation Applied to Handwritten Zip Code Recognition",
+            "publication_date": "1989-12-01",
+            "publication_year": 1989,
+            "cited_by_count": 11115,
+            "doi": "https://doi.org/10.1162/neco.1989.1.4.541",
+            "venue": null,
+            "venue_type": null,
+            "open_access": false,
+            "type": "article",
+            "concepts": [
+                "Backpropagation",
+                "Computer science",
+                "Code (set theory)",
+                "Artificial neural network",
+                "Artificial intelligence"
+            ],
+            "abstract": "The ability of learning networks to generalize can be greatly enhanced by providing constraints from the task domain. This paper demonstrates how such constraints can be integrated into a backpropagation network through the architecture of the network. This approach has been successfully applied to the recognition of handwritten zip code digits provided by the U.S. Postal Service. A single network learns the entire recognition operation, going from the normalized image of the character to the final classification.",
+            "has_abstract": true
+        },
+        {
+            "id": "https://openalex.org/W2138621090",
+            "title": "Dimensionality Reduction by Learning an Invariant Mapping",
+            "publication_date": "2006-07-10",
+            "publication_year": 2006,
+            "cited_by_count": 4723,
+            "doi": "https://doi.org/10.1109/cvpr.2006.100",
+            "venue": null,
+            "venue_type": null,
+            "open_access": false,
+            "type": "article",
+            "concepts": [
+                "Dimensionality reduction",
+                "Nonlinear dimensionality reduction",
+                "Manifold (fluid mechanics)",
+                "Invariant (physics)",
+                "Invariant manifold"
+            ],
+            "abstract": "Dimensionality reduction involves mapping a set of high dimensional input points onto a low dimensional manifold so that 'similar\" points in input space are mapped to nearby points on the manifold. We present a method - called Dimensionality Reduction by Learning an Invariant Mapping (DrLIM) - for learning a globally coherent nonlinear function that maps the data evenly to the output manifold. The learning relies solely on neighborhood relationships and does not require any distancemeasure in the input space. The method can learn mappings that are invariant to certain transformations of the inputs, as is demonstrated with a number of experiments. Comparisons are made to other techniques, in particular LLE.",
+            "has_abstract": true
+        },
+        {
+            "id": "https://openalex.org/W1538131130",
+            "title": "Convolutional networks for images, speech, and time series",
+            "publication_date": "1998-10-01",
+            "publication_year": 1998,
+            "cited_by_count": 3952,
+            "doi": null,
+            "venue": null,
+            "venue_type": null,
+            "open_access": false,
+            "type": "book",
+            "concepts": [
+                "Series (stratigraphy)",
+                "Computer science",
+                "Speech recognition",
+                "Artificial intelligence",
+                "Natural language processing"
+            ],
+            "abstract": null,
+            "has_abstract": false
+        },
+        {
+            "id": "https://openalex.org/W2157364932",
+            "title": "Learning a Similarity Metric Discriminatively, with Application to Face Verification",
+            "publication_date": "2005-07-27",
+            "publication_year": 2005,
+            "cited_by_count": 3645,
+            "doi": "https://doi.org/10.1109/cvpr.2005.202",
+            "venue": null,
+            "venue_type": null,
+            "open_access": false,
+            "type": "article",
+            "concepts": [
+                "Discriminative model",
+                "Artificial intelligence",
+                "Robustness (evolution)",
+                "Computer science",
+                "Pattern recognition (psychology)"
+            ],
+            "abstract": "We present a method for training a similarity metric from data. The method can be used for recognition or verification applications where the number of categories is very large and not known during training, and where the number of training samples for a single category is very small. The idea is to learn a function that maps input patterns into a target space such that the L/sub 1/ norm in the target space approximates the \"semantic\" distance in the input space. The method is applied to a face verification task. The learning process minimizes a discriminative loss function that drives the similarity metric to be small for pairs of faces from the same person, and large for pairs from different persons. The mapping from raw to the target space is a convolutional network whose architecture is designed for robustness to geometric distortions. The system is tested on the Purdue/AR face database which has a very high degree of variability in the pose, lighting, expression, position, and artificial occlusions such as dark glasses and obscuring scarves.",
+            "has_abstract": true
+        },
+        {
+            "id": "https://openalex.org/W2963542991",
+            "title": "OverFeat: Integrated Recognition, Localization and Detection using Convolutional Networks",
+            "publication_date": "2014-02-23",
+            "publication_year": 2014,
+            "cited_by_count": 3575,
+            "doi": null,
+            "venue": null,
+            "venue_type": null,
+            "open_access": false,
+            "type": "article",
+            "concepts": [
+                "Computer science",
+                "Bounding overwatch",
+                "Artificial intelligence",
+                "Object detection",
+                "Sliding window protocol"
+            ],
+            "abstract": "Abstract: We present an integrated framework for using Convolutional Networks for classification, localization and detection. We show how a multiscale and sliding window approach can be efficiently implemented within a ConvNet. We also introduce a novel deep learning approach to localization by learning to predict object boundaries. Bounding boxes are then accumulated rather than suppressed in order to increase detection confidence. We show that different tasks can be learned simultaneously using a single shared network. This integrated framework is the winner of the localization task of the ImageNet Large Scale Visual Recognition Challenge 2013 (ILSVRC2013) and obtained very competitive results for the detection and classifications tasks. In post-competition work, we establish a new state of the art for the detection task. Finally, we release a feature extractor from our best model called OverFeat.",
+            "has_abstract": true
+        },
+        {
+            "id": "https://openalex.org/W2154579312",
+            "title": "Handwritten Digit Recognition with a Back-Propagation Network",
+            "publication_date": "1989-01-01",
+            "publication_year": 1989,
+            "cited_by_count": 3314,
+            "doi": null,
+            "venue": null,
+            "venue_type": null,
+            "open_access": false,
+            "type": "article",
+            "concepts": [
+                "Numerical digit",
+                "Computer science",
+                "Preprocessor",
+                "Word error rate",
+                "Task (project management)"
+            ],
+            "abstract": "We present an application of back-propagation networks to handwritten digit recognition. Minimal preprocessing of the data was required, but architecture of the network was highly constrained and specifically designed for the task. The input of the network consists of normalized images of isolated digits. The method has 1% error rate and about a 9% reject rate on zipcode digits provided by the U.S. Postal Service.",
+            "has_abstract": true
+        },
+        {
+            "id": "https://openalex.org/W2558748708",
+            "title": "Geometric Deep Learning: Going beyond Euclidean data",
+            "publication_date": "2017-07-01",
+            "publication_year": 2017,
+            "cited_by_count": 3303,
+            "doi": "https://doi.org/10.1109/msp.2017.2693418",
+            "venue": null,
+            "venue_type": null,
+            "open_access": true,
+            "type": "article",
+            "concepts": [
+                "Deep learning",
+                "Computer science",
+                "Artificial intelligence",
+                "Euclidean geometry",
+                "Artificial neural network"
+            ],
+            "abstract": "Many scientific fields study data with an underlying structure that is a non-Euclidean space. Some examples include social networks in computational social sciences, sensor networks in communications, functional networks in brain imaging, regulatory networks in genetics, and meshed surfaces in computer graphics. In many applications, such geometric data are large and complex (in the case of social networks, on the scale of billions), and are natural targets for machine learning techniques. In particular, we would like to use deep neural networks, which have recently proven to be powerful tools for a broad range of problems from computer vision, natural language processing, and audio analysis. However, these tools have been most successful on data with an underlying Euclidean or grid-like structure, and in cases where the invariances of these structures are built into networks used to model them. Geometric deep learning is an umbrella term for emerging techniques attempting to generalize (structured) deep neural models to non-Euclidean domains such as graphs and manifolds. The purpose of this paper is to overview different examples of geometric deep learning problems and present available solutions, key difficulties, applications, and future research directions in this nascent field.",
+            "has_abstract": true
+        },
+        {
+            "id": "https://openalex.org/W2963155035",
+            "title": "A Closer Look at Spatiotemporal Convolutions for Action Recognition",
+            "publication_date": "2018-06-01",
+            "publication_year": 2018,
+            "cited_by_count": 3174,
+            "doi": "https://doi.org/10.1109/cvpr.2018.00675",
+            "venue": null,
+            "venue_type": null,
+            "open_access": true,
+            "type": "article",
+            "concepts": [
+                "Action recognition",
+                "Computer science",
+                "Residual",
+                "Block (permutation group theory)",
+                "Artificial intelligence"
+            ],
+            "abstract": "In this paper we discuss several forms of spatiotemporal convolutions for video analysis and study their effects on action recognition. Our motivation stems from the observation that 2D CNNs applied to individual frames of the video have remained solid performers in action recognition. In this work we empirically demonstrate the accuracy advantages of 3D CNNs over 2D CNNs within the framework of residual learning. Furthermore, we show that factorizing the 3D convolutional filters into separate spatial and temporal components yields significantly gains in accuracy. Our empirical study leads to the design of a new spatiotemporal convolutional block \"R(2+1)D\" which produces CNNs that achieve results comparable or superior to the state-of-the-art on Sports-1M, Kinetics, UCF101, and HMDB51.",
+            "has_abstract": true
+        }
+    ]
+}

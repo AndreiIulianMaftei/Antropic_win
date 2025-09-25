@@ -43,19 +43,17 @@ class ApiResponse(BaseModel):
     message: str = None
     error: str = None
 
-class UserProfile(BaseModel):
-    name: str
-    linkedin_url: str = None
-    github_url: str = None
-    university: str = None
-    email: str = None  # Optional additional field
-    bio: str = None    # Optional additional field
+class SetupInfo(BaseModel):
+    data: Dict[Any, Any]  # Accept any JSON structure
 
-class UserProfileResponse(BaseModel):
+class Prospects(BaseModel):
+    data: Dict[Any, Any]  # Accept any JSON structure
+
+class DataResponse(BaseModel):
     success: bool
-    profile_id: str = None
+    id: str = None
     message: str = None
-    data: UserProfile = None
+    data: Dict[Any, Any] = None
     error: str = None
 
 # Root endpoint
@@ -91,10 +89,11 @@ async def api_info():
             {"path": "/api/info", "method": "GET", "description": "API information"},
             {"path": "/api/agent/{agent_id}", "method": "GET", "description": "Get agent information"},
             {"path": "/api/calls", "method": "POST", "description": "Get last call for agent"},
-            {"path": "/api/profile", "method": "POST", "description": "Create user profile with name, LinkedIn, GitHub, university"},
-            {"path": "/api/profile/{profile_id}", "method": "GET", "description": "Get user profile by ID"},
-            {"path": "/api/profiles", "method": "GET", "description": "List all user profiles"},
-            {"path": "/api/profile/{profile_id}", "method": "DELETE", "description": "Delete user profile"}
+            {"path": "/api/setupinfo", "method": "POST", "description": "Receive setupinfo JSON data"},
+            {"path": "/api/prospects", "method": "POST", "description": "Receive prospects JSON data"},
+            {"path": "/api/setupinfo/{data_id}", "method": "GET", "description": "Get setupinfo by ID"},
+            {"path": "/api/prospects/{data_id}", "method": "GET", "description": "Get prospects by ID"},
+            {"path": "/api/data", "method": "GET", "description": "List all stored data"}
         ]
     }
 
@@ -142,170 +141,188 @@ async def get_agent_calls(request: AgentRequest):
             message="Failed to retrieve agent calls"
         )
 
-# Helper function to get next profile number
-def get_next_profile_number():
-    """Get the next incremental profile number"""
-    os.makedirs("user_profiles", exist_ok=True)
+# Helper function to get next data number
+def get_next_data_number(data_type: str):
+    """Get the next incremental data number for setupinfo or prospects"""
+    os.makedirs("data_storage", exist_ok=True)
     
-    # Find existing profile files
+    # Find existing files of this type
     existing_files = []
-    for filename in os.listdir("user_profiles"):
-        if filename.endswith(".json") and filename[:-5].isdigit():
-            existing_files.append(int(filename[:-5]))
+    for filename in os.listdir("data_storage"):
+        if filename.startswith(f"{data_type}_") and filename.endswith(".json"):
+            try:
+                number = int(filename.replace(f"{data_type}_", "").replace(".json", ""))
+                existing_files.append(number)
+            except ValueError:
+                continue
     
     # Return next number (starting from 1)
     return max(existing_files) + 1 if existing_files else 1
 
-# User profile endpoints
-@app.post("/api/profile", response_model=UserProfileResponse)
-async def create_user_profile(profile: UserProfile):
-    """Create or update a user profile with name, LinkedIn, GitHub, and university info"""
+# SetupInfo endpoint
+@app.post("/api/setupinfo", response_model=DataResponse)
+async def receive_setupinfo(setupinfo: SetupInfo):
+    """Receive and store setupinfo JSON data"""
     try:
-        # Generate incremental profile ID
-        profile_number = get_next_profile_number()
-        profile_id = str(profile_number)
+        # Generate incremental ID
+        data_number = get_next_data_number("setupinfo")
+        data_id = str(data_number)
         
-        # Here you can add validation logic
-        if not profile.name or len(profile.name.strip()) == 0:
-            raise HTTPException(status_code=400, detail="Name is required")
-        
-        # Validate URLs if provided
-        if profile.linkedin_url and not (profile.linkedin_url.startswith('http://') or profile.linkedin_url.startswith('https://')):
-            raise HTTPException(status_code=400, detail="LinkedIn URL must start with http:// or https://")
-        
-        if profile.github_url and not (profile.github_url.startswith('http://') or profile.github_url.startswith('https://')):
-            raise HTTPException(status_code=400, detail="GitHub URL must start with http:// or https://")
-        
-        # Save profile data (you can implement database storage here)
-        profile_data = {
-            "profile_id": profile_id,
-            "name": profile.name.strip(),
-            "linkedin_url": profile.linkedin_url,
-            "github_url": profile.github_url,
-            "university": profile.university,
-            "email": profile.email,
-            "bio": profile.bio,
-            "created_at": datetime.now().isoformat(),
-            "updated_at": datetime.now().isoformat()
+        # Prepare data for storage
+        storage_data = {
+            "id": data_id,
+            "type": "setupinfo",
+            "data": setupinfo.data,
+            "received_at": datetime.now().isoformat()
         }
         
         # Save to incremental JSON file
         try:
-            filename = f"user_profiles/{profile_id}.json"
+            filename = f"data_storage/setupinfo_{data_id}.json"
             with open(filename, 'w', encoding='utf-8') as f:
-                json.dump(profile_data, f, indent=2, ensure_ascii=False)
+                json.dump(storage_data, f, indent=2, ensure_ascii=False)
         except Exception as e:
-            print(f"Warning: Could not save profile to file: {e}")
+            print(f"Warning: Could not save setupinfo to file: {e}")
         
-        return UserProfileResponse(
+        return DataResponse(
             success=True,
-            profile_id=profile_id,
-            message="User profile created successfully",
-            data=profile
+            id=data_id,
+            message="SetupInfo data received successfully",
+            data=setupinfo.data
         )
     
-    except HTTPException:
-        raise
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to create user profile: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Failed to process setupinfo: {str(e)}")
 
-@app.get("/api/profile/{profile_id}", response_model=UserProfileResponse)
-async def get_user_profile(profile_id: str):
-    """Retrieve a user profile by ID"""
+# Prospects endpoint
+@app.post("/api/prospects", response_model=DataResponse)
+async def receive_prospects(prospects: Prospects):
+    """Receive and store prospects JSON data"""
     try:
-        filename = f"user_profiles/{profile_id}.json"
+        # Generate incremental ID
+        data_number = get_next_data_number("prospects")
+        data_id = str(data_number)
+        
+        # Prepare data for storage
+        storage_data = {
+            "id": data_id,
+            "type": "prospects",
+            "data": prospects.data,
+            "received_at": datetime.now().isoformat()
+        }
+        
+        # Save to incremental JSON file
+        try:
+            filename = f"data_storage/prospects_{data_id}.json"
+            with open(filename, 'w', encoding='utf-8') as f:
+                json.dump(storage_data, f, indent=2, ensure_ascii=False)
+        except Exception as e:
+            print(f"Warning: Could not save prospects to file: {e}")
+        
+        return DataResponse(
+            success=True,
+            id=data_id,
+            message="Prospects data received successfully",
+            data=prospects.data
+        )
+    
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to process prospects: {str(e)}")
+
+# Get setupinfo by ID
+@app.get("/api/setupinfo/{data_id}", response_model=DataResponse)
+async def get_setupinfo(data_id: str):
+    """Retrieve setupinfo data by ID"""
+    try:
+        filename = f"data_storage/setupinfo_{data_id}.json"
         
         if not os.path.exists(filename):
-            raise HTTPException(status_code=404, detail="Profile not found")
+            raise HTTPException(status_code=404, detail="SetupInfo data not found")
         
         with open(filename, 'r', encoding='utf-8') as f:
-            profile_data = json.load(f)
+            stored_data = json.load(f)
         
-        # Convert back to UserProfile model
-        user_profile = UserProfile(
-            name=profile_data["name"],
-            linkedin_url=profile_data.get("linkedin_url"),
-            github_url=profile_data.get("github_url"),
-            university=profile_data.get("university"),
-            email=profile_data.get("email"),
-            bio=profile_data.get("bio")
-        )
-        
-        return UserProfileResponse(
+        return DataResponse(
             success=True,
-            profile_id=profile_id,
-            message="Profile retrieved successfully",
-            data=user_profile
+            id=data_id,
+            message="SetupInfo data retrieved successfully",
+            data=stored_data["data"]
         )
     
     except HTTPException:
         raise
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to retrieve profile: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Failed to retrieve setupinfo: {str(e)}")
 
-@app.get("/api/profiles")
-async def list_user_profiles():
-    """List all user profiles"""
+# Get prospects by ID
+@app.get("/api/prospects/{data_id}", response_model=DataResponse)
+async def get_prospects(data_id: str):
+    """Retrieve prospects data by ID"""
     try:
-        profiles_dir = "user_profiles"
-        if not os.path.exists(profiles_dir):
-            return {"success": True, "profiles": [], "message": "No profiles found"}
+        filename = f"data_storage/prospects_{data_id}.json"
         
-        profiles = []
-        for filename in os.listdir(profiles_dir):
+        if not os.path.exists(filename):
+            raise HTTPException(status_code=404, detail="Prospects data not found")
+        
+        with open(filename, 'r', encoding='utf-8') as f:
+            stored_data = json.load(f)
+        
+        return DataResponse(
+            success=True,
+            id=data_id,
+            message="Prospects data retrieved successfully",
+            data=stored_data["data"]
+        )
+    
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to retrieve prospects: {str(e)}")
+
+# List all stored data
+@app.get("/api/data")
+async def list_all_data():
+    """List all stored setupinfo and prospects data"""
+    try:
+        data_dir = "data_storage"
+        if not os.path.exists(data_dir):
+            return {"success": True, "data": [], "message": "No data found"}
+        
+        all_data = []
+        for filename in os.listdir(data_dir):
             if filename.endswith('.json'):
                 try:
-                    with open(os.path.join(profiles_dir, filename), 'r', encoding='utf-8') as f:
-                        profile_data = json.load(f)
-                        profiles.append({
-                            "profile_id": profile_data["profile_id"],
-                            "name": profile_data["name"],
-                            "university": profile_data.get("university"),
-                            "created_at": profile_data["created_at"]
+                    with open(os.path.join(data_dir, filename), 'r', encoding='utf-8') as f:
+                        stored_data = json.load(f)
+                        all_data.append({
+                            "id": stored_data["id"],
+                            "type": stored_data["type"],
+                            "received_at": stored_data["received_at"],
+                            "filename": filename
                         })
                 except Exception as e:
-                    print(f"Error reading profile {filename}: {e}")
+                    print(f"Error reading data {filename}: {e}")
                     continue
         
         return {
             "success": True,
-            "profiles": sorted(profiles, key=lambda x: int(x["profile_id"]), reverse=True),
-            "count": len(profiles),
-            "message": f"Found {len(profiles)} profiles"
+            "data": sorted(all_data, key=lambda x: x["received_at"], reverse=True),
+            "count": len(all_data),
+            "message": f"Found {len(all_data)} data entries"
         }
     
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to list profiles: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Failed to list data: {str(e)}")
 
-@app.delete("/api/profile/{profile_id}")
-async def delete_user_profile(profile_id: str):
-    """Delete a user profile by ID"""
-    try:
-        filename = f"user_profiles/{profile_id}.json"
-        
-        if not os.path.exists(filename):
-            raise HTTPException(status_code=404, detail="Profile not found")
-        
-        os.remove(filename)
-        
-        return {
-            "success": True,
-            "message": f"Profile {profile_id} deleted successfully"
-        }
-    
-    except HTTPException:
-        raise
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to delete profile: {str(e)}")
-
-# Example POST endpoint
+# Generic data endpoint (fallback)
 @app.post("/api/data")
-async def post_data(data: Dict[Any, Any]):
-    """Accept and process POST data"""
+async def post_generic_data(data: Dict[Any, Any]):
+    """Accept and process generic POST data"""
     return {
-        "message": "Data received successfully",
+        "message": "Generic data received successfully",
         "received_data": data,
-        "timestamp": datetime.now().isoformat()
+        "timestamp": datetime.now().isoformat(),
+        "note": "Use /api/setupinfo or /api/prospects for structured data"
     }
 
 # Custom 404 handler

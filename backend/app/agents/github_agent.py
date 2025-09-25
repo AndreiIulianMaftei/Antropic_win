@@ -9,7 +9,7 @@ from tavily import TavilyClient
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(PROJECT_ROOT)
 
-from core.base_openrouter_agent import BaseOpenRouterAgent
+from app.core.base_openrouter_agent import BaseOpenRouterAgent
 
 # --- Prompt is now a constant inside the Python file ---
 GITHUB_ANALYSIS_PROMPT = """

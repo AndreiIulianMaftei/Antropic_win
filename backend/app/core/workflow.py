@@ -6,9 +6,9 @@ import json
 from typing import Dict, Any
 
 # Adjust imports to use the new OpenAlex agent
-from agents.linkedin_agent import create_linkedin_agent, fetch_profile_via_agent
-from agents.openalex_agent import fetch_openalex_data # CORRECTED IMPORT
-from agents.github_agent import GithubAgent
+from app.agents.linkedin_agent import create_linkedin_agent, fetch_profile_via_agent
+from app.agents.openalex_agent import fetch_openalex_data # CORRECTED IMPORT
+from app.agents.github_agent import GithubAgent
 
 class FounderAnalysisOrchestrator:
     """

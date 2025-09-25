@@ -1,0 +1,35 @@
+{
+  "id": "10",
+  "type": "prospects",
+  "data": {
+    "startupInfo": {
+      "name": "TechFlow",
+      "product": "AI-powered workflow automation platform",
+      "founded": "2024",
+      "mission": "Streamline business processes using intelligent automation",
+      "businessModel": "SaaS subscription model targeting enterprise clients",
+      "isManual": true
+    },
+    "teamList": [
+      {
+        "id": "1",
+        "name": "Sarah Chen",
+        "email": "sarah.chen@email.com",
+        "github": "https://github.com/sarahchen",
+        "linkedin": "https://linkedin.com/in/sarahchen",
+        "university": "Stanford University",
+        "notes": "AI/ML expert with 5 years experience at Google"
+      },
+      {
+        "id": "2",
+        "name": "Marcus Rodriguez",
+        "email": "marcus.r@email.com",
+        "github": "https://github.com/marcusr",
+        "linkedin": "https://linkedin.com/in/marcusrodriguez",
+        "university": "MIT",
+        "notes": "Full-stack engineer, previously at Meta"
+      }
+    ]
+  },
+  "received_at": "2025-09-25T17:08:37.608493"
+}

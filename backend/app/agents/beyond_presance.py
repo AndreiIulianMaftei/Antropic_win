@@ -194,16 +194,23 @@ def get_last_call_for_agent(api_key: str, agent_id: str, actor_name: str) -> Opt
         }
     }
     
-    # Save to file with actor name and timestamp
+    # Save to file with actor name and timestamp in interview_transcript folder
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     filename = f"{actor_name.lower().replace(' ', '_')}_last_call_{timestamp}.json"
     
-    with open(filename, 'w', encoding='utf-8') as f:
+    # Ensure the interview_transcript directory exists
+    transcript_dir = "../../../workflow/interview_transcript"
+    os.makedirs(transcript_dir, exist_ok=True)
+    
+    # Full path to the file
+    filepath = os.path.join(transcript_dir, filename)
+    
+    with open(filepath, 'w', encoding='utf-8') as f:
         json.dump(result, f, indent=2, ensure_ascii=False)
     
     print(f"\n=== {actor_name} ===")
     print(json.dumps(result, indent=2))
-    print(f"\nData saved to: {filename}")
+    print(f"\nData saved to: {filepath}")
     
     return result
 
@@ -325,14 +332,21 @@ def main() -> None:
                 for flag in red_flags:
                     print(f"  • {flag}")
         
-        # Save full analysis results
+        # Save full analysis results to interview_analasys folder
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         analysis_filename = f"founder_compatibility_analysis_{timestamp}.json"
         
-        with open(analysis_filename, 'w', encoding='utf-8') as f:
+        # Ensure the interview_analysis directory exists
+        analysis_dir = "../../../workflow/interview_analysis"
+        os.makedirs(analysis_dir, exist_ok=True)
+        
+        # Full path to the analysis file
+        analysis_filepath = os.path.join(analysis_dir, analysis_filename)
+        
+        with open(analysis_filepath, 'w', encoding='utf-8') as f:
             json.dump(compatibility_result, f, indent=2, ensure_ascii=False)
         
-        print(f"\n💾 Full analysis saved to: {analysis_filename}")
+        print(f"\n💾 Full analysis saved to: {analysis_filepath}")
         print(f"\n{'='*80}")
         print("COMPATIBILITY ANALYSIS COMPLETED")
         print("="*80)

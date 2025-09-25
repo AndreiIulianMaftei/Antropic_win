@@ -51,6 +51,6 @@ async def fetch_profile_via_agent(agent: Agent, url: str):
 
     with open("backend/app/core/prompts/linkedIn_run.txt", "r") as prompt_file:
         prompt = prompt_file.read()
-
+    prompt.format({"url": url})
     agent_response = await agent.run(prompt)
     return agent_response.output

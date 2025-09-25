@@ -1,4 +1,3 @@
-bey
 python-dotenv>=1.0.0
 livekit-plugins-bey
 livekit-api

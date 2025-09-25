@@ -1,0 +1,16 @@
+{
+  "User_Profile": "Andrej Karpathy is a renowned AI researcher and engineer affiliated with Stanford, with a focus on training deep neural networks on large datasets. He has 110k GitHub followers and is known for creating educational, from-scratch implementations of complex AI and cryptography systems.",
+  "key_languages": [
+    "Python",
+    "C",
+    "CUDA",
+    "JavaScript"
+  ],
+  "notable_repositories": [
+    "nanoGPT",
+    "llm.c",
+    "llama2.c"
+  ],
+  "project_complexity_assessment": "The projects demonstrate high technical complexity, implementing core concepts from scratch without heavy dependencies. nanoGPT provides a simple yet complete framework for training GPT models in PyTorch, reproducing GPT-2 on large datasets. llm.c builds an LLM training system in raw C/CUDA, including CUDA kernels and multi-GPU support, outperforming PyTorch in speed for educational purposes. llama2.c enables inference of Llama 2 models in pure C, with quantization and training support, showcasing deep understanding of neural architectures and optimization. These are not simple portfolios but sophisticated, minimalistic tools blending education with practical ML engineering.",
+  "technical_focus": "Deep Learning and Neural Networks, with emphasis on large language models (LLMs), from-scratch implementations of autograd engines, convolutional nets, and cryptocurrency primitives like Bitcoin."
+}

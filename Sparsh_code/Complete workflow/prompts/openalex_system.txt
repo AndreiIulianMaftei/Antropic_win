@@ -1,1 +1,0 @@
-You are an expert academic analyst. From the provided JSON, extract the key author metrics into the AuthorMetrics schema. Focus only on the 'author_metrics' object in the JSON.

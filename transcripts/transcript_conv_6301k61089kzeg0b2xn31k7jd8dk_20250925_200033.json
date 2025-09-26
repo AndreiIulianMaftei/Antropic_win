@@ -1,0 +1,447 @@
+{
+  "agent_id": "agent_7701k60ynmmvejyrk5wz40fjdvcj",
+  "conversation_id": "conv_6301k61089kzeg0b2xn31k7jd8dk",
+  "status": "done",
+  "user_id": null,
+  "transcript": [
+    {
+      "role": "user",
+      "agent_metadata": null,
+      "message": "Hello.",
+      "multivoice_message": null,
+      "tool_calls": [],
+      "tool_results": [],
+      "feedback": null,
+      "llm_override": null,
+      "time_in_call_secs": 2,
+      "conversation_turn_metrics": {
+        "metrics": {
+          "convai_asr_trailing_service_latency": {
+            "elapsed_time": 0.10225020300094911
+          }
+        }
+      },
+      "rag_retrieval_info": null,
+      "llm_usage": null,
+      "interrupted": false,
+      "original_message": null,
+      "source_medium": "audio"
+    },
+    {
+      "role": "agent",
+      "agent_metadata": {
+        "agent_id": "agent_7701k60ynmmvejyrk5wz40fjdvcj",
+        "workflow_node_id": null
+      },
+      "message": "Hello, I'm glad to be conducting this interview with you today. As you know, we're very interested in your company and its potential. But beyond the technology and market, we're also deeply interested in understanding you as a leader.\n\nTo start, could you describe a time when you faced a significant setback in your entrepreneurial journey, and how you navigated through it? What did you learn about yourself in that process?\n",
+      "multivoice_message": null,
+      "tool_calls": [],
+      "tool_results": [],
+      "feedback": null,
+      "llm_override": null,
+      "time_in_call_secs": 3,
+      "conversation_turn_metrics": {
+        "metrics": {
+          "convai_llm_service_tt_last_sentence": {
+            "elapsed_time": 1.131478817000243
+          },
+          "convai_llm_service_ttf_sentence": {
+            "elapsed_time": 0.5630400800000643
+          },
+          "convai_tts_service_ttfb": {
+            "elapsed_time": 0.2050497029995313
+          },
+          "convai_llm_service_ttfb": {
+            "elapsed_time": 0.36309108000023116
+          }
+        }
+      },
+      "rag_retrieval_info": null,
+      "llm_usage": {
+        "model_usage": {
+          "gemini-2.0-flash": {
+            "input": {
+              "tokens": 704,
+              "price": 7.04e-05
+            },
+            "input_cache_read": {
+              "tokens": 0,
+              "price": 0.0
+            },
+            "input_cache_write": {
+              "tokens": 0,
+              "price": 0.0
+            },
+            "output_total": {
+              "tokens": 90,
+              "price": 3.6e-05
+            }
+          }
+        }
+      },
+      "interrupted": false,
+      "original_message": null,
+      "source_medium": null
+    },
+    {
+      "role": "user",
+      "agent_metadata": null,
+      "message": "A time where I faced a significant challenge in my entrepreneurial journey, I would say would be the very, very beginning. I had a very heavy workload. I did not have much time considering studies and additional responsibilities like internships and founding a company just never came to my mind in the beginning. Later on, when I was granted an opportunity to take part in an incubator program, that's where I discovered many, many founders who had such inspiring mindsets and personalities. I wanted to work alongside going forward in the future.",
+      "multivoice_message": null,
+      "tool_calls": [],
+      "tool_results": [],
+      "feedback": null,
+      "llm_override": null,
+      "time_in_call_secs": 26,
+      "conversation_turn_metrics": {
+        "metrics": {
+          "convai_asr_trailing_service_latency": {
+            "elapsed_time": 0.12901167899872235
+          }
+        }
+      },
+      "rag_retrieval_info": null,
+      "llm_usage": null,
+      "interrupted": false,
+      "original_message": null,
+      "source_medium": "audio"
+    },
+    {
+      "role": "agent",
+      "agent_metadata": {
+        "agent_id": "agent_7701k60ynmmvejyrk5wz40fjdvcj",
+        "workflow_node_id": null
+      },
+      "message": "That's interesting. It sounds like the incubator program was a pivotal moment for you.\n\nCan you elaborate on the specific challenges you faced when balancing your studies, internships, and the initial stages of building your company? What strategies did you develop to manage that heavy workload and avoid burnout?\n",
+      "multivoice_message": null,
+      "tool_calls": [],
+      "tool_results": [],
+      "feedback": null,
+      "llm_override": null,
+      "time_in_call_secs": 64,
+      "conversation_turn_metrics": {
+        "metrics": {
+          "convai_llm_service_tt_last_sentence": {
+            "elapsed_time": 1.0224282660001336
+          },
+          "convai_llm_service_ttf_sentence": {
+            "elapsed_time": 0.6628756749996683
+          },
+          "convai_tts_service_ttfb": {
+            "elapsed_time": 6.116614824000862
+          },
+          "convai_llm_service_ttfb": {
+            "elapsed_time": 0.25518303599892533
+          }
+        }
+      },
+      "rag_retrieval_info": null,
+      "llm_usage": {
+        "model_usage": {
+          "gemini-2.0-flash": {
+            "input": {
+              "tokens": 900,
+              "price": 9e-05
+            },
+            "input_cache_read": {
+              "tokens": 0,
+              "price": 0.0
+            },
+            "input_cache_write": {
+              "tokens": 0,
+              "price": 0.0
+            },
+            "output_total": {
+              "tokens": 59,
+              "price": 2.36e-05
+            }
+          }
+        }
+      },
+      "interrupted": false,
+      "original_message": null,
+      "source_medium": null
+    },
+    {
+      "role": "user",
+      "agent_metadata": null,
+      "message": "Well, I watched Parrot's videos on YouTube. That really helped me understand the joy in life and lessen the strain from the various workloads. Other than that, good time management scheduling in a supportive environment were key.",
+      "multivoice_message": null,
+      "tool_calls": [],
+      "tool_results": [],
+      "feedback": null,
+      "llm_override": null,
+      "time_in_call_secs": 84,
+      "conversation_turn_metrics": {
+        "metrics": {
+          "convai_asr_trailing_service_latency": {
+            "elapsed_time": 0.11866484599886462
+          }
+        }
+      },
+      "rag_retrieval_info": null,
+      "llm_usage": null,
+      "interrupted": false,
+      "original_message": null,
+      "source_medium": "audio"
+    },
+    {
+      "role": "agent",
+      "agent_metadata": {
+        "agent_id": "agent_7701k60ynmmvejyrk5wz40fjdvcj",
+        "workflow_node_id": null
+      },
+      "message": "I see. It sounds like you found some helpful resources and strategies for managing your workload.\n\nCan you tell me more about the supportive environment you mentioned? Who did you rely on for support during that time, and how did they help you navigate the challenges you were facing?\n",
+      "multivoice_message": null,
+      "tool_calls": [],
+      "tool_results": [],
+      "feedback": null,
+      "llm_override": null,
+      "time_in_call_secs": 107,
+      "conversation_turn_metrics": {
+        "metrics": {
+          "convai_llm_service_tt_last_sentence": {
+            "elapsed_time": 0.7156547659997159
+          },
+          "convai_llm_service_ttf_sentence": {
+            "elapsed_time": 0.6315805590002128
+          },
+          "convai_tts_service_ttfb": {
+            "elapsed_time": 0.14742857800047204
+          },
+          "convai_llm_service_ttfb": {
+            "elapsed_time": 0.3212730469986127
+          }
+        }
+      },
+      "rag_retrieval_info": null,
+      "llm_usage": {
+        "model_usage": {
+          "gemini-2.0-flash": {
+            "input": {
+              "tokens": 1003,
+              "price": 0.00010030000000000001
+            },
+            "input_cache_read": {
+              "tokens": 0,
+              "price": 0.0
+            },
+            "input_cache_write": {
+              "tokens": 0,
+              "price": 0.0
+            },
+            "output_total": {
+              "tokens": 56,
+              "price": 2.2400000000000002e-05
+            }
+          }
+        }
+      },
+      "interrupted": false,
+      "original_message": null,
+      "source_medium": null
+    },
+    {
+      "role": "user",
+      "agent_metadata": null,
+      "message": "Mentors and seniors at university and my coworkers. Hello?",
+      "multivoice_message": null,
+      "tool_calls": [],
+      "tool_results": [],
+      "feedback": null,
+      "llm_override": null,
+      "time_in_call_secs": 123,
+      "conversation_turn_metrics": null,
+      "rag_retrieval_info": null,
+      "llm_usage": null,
+      "interrupted": false,
+      "original_message": null,
+      "source_medium": null
+    }
+  ],
+  "metadata": {
+    "start_time_unix_secs": 1758822934,
+    "accepted_time_unix_secs": 1758822934,
+    "call_duration_secs": 130,
+    "cost": 1445,
+    "deletion_settings": {
+      "deletion_time_unix_secs": null,
+      "deleted_logs_at_time_unix_secs": null,
+      "deleted_audio_at_time_unix_secs": null,
+      "deleted_transcript_at_time_unix_secs": null,
+      "delete_transcript_and_pii": false,
+      "delete_audio": false
+    },
+    "feedback": {
+      "overall_score": null,
+      "likes": 0,
+      "dislikes": 0
+    },
+    "authorization_method": "public",
+    "charging": {
+      "dev_discount": false,
+      "is_burst": false,
+      "tier": "free",
+      "llm_usage": {
+        "irreversible_generation": {
+          "model_usage": {
+            "gemini-2.0-flash": {
+              "input": {
+                "tokens": 2607,
+                "price": 0.0002607
+              },
+              "input_cache_read": {
+                "tokens": 0,
+                "price": 0.0
+              },
+              "input_cache_write": {
+                "tokens": 0,
+                "price": 0.0
+              },
+              "output_total": {
+                "tokens": 205,
+                "price": 8.2e-05
+              }
+            }
+          }
+        },
+        "initiated_generation": {
+          "model_usage": {
+            "gemini-2.0-flash": {
+              "input": {
+                "tokens": 3676,
+                "price": 0.0003676
+              },
+              "input_cache_read": {
+                "tokens": 0,
+                "price": 0.0
+              },
+              "input_cache_write": {
+                "tokens": 0,
+                "price": 0.0
+              },
+              "output_total": {
+                "tokens": 269,
+                "price": 0.0001076
+              }
+            }
+          }
+        }
+      },
+      "llm_price": 0.0004752,
+      "llm_charge": 5,
+      "call_charge": 1440,
+      "free_minutes_consumed": 0.0,
+      "free_llm_dollars_consumed": 0.0
+    },
+    "phone_call": null,
+    "batch_call": null,
+    "termination_reason": "Client disconnected: 1005",
+    "error": null,
+    "main_language": "en",
+    "rag_usage": null,
+    "text_only": false,
+    "features_usage": {
+      "language_detection": {
+        "enabled": false,
+        "used": false
+      },
+      "transfer_to_agent": {
+        "enabled": false,
+        "used": false
+      },
+      "transfer_to_number": {
+        "enabled": false,
+        "used": false
+      },
+      "multivoice": {
+        "enabled": false,
+        "used": false
+      },
+      "dtmf_tones": {
+        "enabled": false,
+        "used": false
+      },
+      "external_mcp_servers": {
+        "enabled": false,
+        "used": false
+      },
+      "pii_zrm_workspace": false,
+      "pii_zrm_agent": false,
+      "tool_dynamic_variable_updates": {
+        "enabled": false,
+        "used": false
+      },
+      "is_livekit": false,
+      "voicemail_detection": {
+        "enabled": false,
+        "used": false
+      },
+      "workflow": {
+        "enabled": false,
+        "tool_node": {
+          "enabled": false,
+          "used": false
+        }
+      },
+      "agent_testing": {
+        "enabled": false,
+        "tests_ran_after_last_modification": false,
+        "tests_ran_in_last_7_days": false
+      }
+    },
+    "eleven_assistant": {
+      "is_eleven_assistant": false
+    },
+    "initiator_id": null,
+    "conversation_initiation_source": "react_sdk",
+    "conversation_initiation_source_version": "0.5.0",
+    "timezone": null
+  },
+  "analysis": {
+    "evaluation_criteria_results": {},
+    "data_collection_results": {},
+    "call_successful": "success",
+    "transcript_summary": "The AI agent is interviewing the user about their entrepreneurial journey. The user describes facing challenges balancing studies, internships, and starting a company. They found support through mentors, seniors, coworkers, and time management strategies. The incubator program was a pivotal moment.\n",
+    "call_summary_title": "Entrepreneurial Journey Interview"
+  },
+  "conversation_initiation_client_data": {
+    "conversation_config_override": {
+      "tts": {
+        "voice_id": null,
+        "stability": null,
+        "speed": null,
+        "similarity_boost": null
+      },
+      "conversation": {
+        "text_only": null
+      },
+      "agent": {
+        "first_message": null,
+        "language": null,
+        "prompt": null
+      }
+    },
+    "custom_llm_extra_body": {},
+    "user_id": null,
+    "source_info": {
+      "source": "react_sdk",
+      "version": "0.5.0"
+    },
+    "dynamic_variables": {
+      "system__agent_id": "agent_7701k60ynmmvejyrk5wz40fjdvcj",
+      "system__timezone": null,
+      "system__caller_id": null,
+      "system__time_utc": "2025-09-25T17:57:44.272079+00:00",
+      "system__call_sid": null,
+      "system__called_number": null,
+      "system__time": "Thursday, 17:57 25 September 2025",
+      "system__conversation_id": "conv_6301k61089kzeg0b2xn31k7jd8dk",
+      "system__call_duration_secs": 130,
+      "system__current_agent_id": "agent_7701k60ynmmvejyrk5wz40fjdvcj"
+    }
+  },
+  "has_audio": true,
+  "has_user_audio": true,
+  "has_response_audio": true
+}

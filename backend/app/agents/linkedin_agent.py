@@ -48,9 +48,9 @@ def create_linkedin_agent() -> Agent:
 
 async def fetch_profile_via_agent(agent: Agent, url: str):
     """Ask the agent to call the appropriate LinkedIn tool to fetch a profile for a URL."""
-
+    print(f"Fetching LinkedIn profile for URL: {url}")
     with open("backend/app/core/prompts/linkedIn_run.txt", "r") as prompt_file:
         prompt = prompt_file.read()
-    prompt.format({"url": url})
-    agent_response = await agent.run(prompt)
+    # prompt.format({"url": url})
+    agent_response = await agent.run(prompt + url)
     return agent_response.output

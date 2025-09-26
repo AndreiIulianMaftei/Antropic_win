@@ -132,7 +132,7 @@ class ConsolidatorAgent(BaseOpenRouterAgent):
     """
     def __init__(self, openrouter_api_key: str):
         # Using a powerful model for this complex synthesis task
-        super().__init__(api_key=openrouter_api_key, model="x-ai/grok-4-fast:free")
+        super().__init__(api_key=openrouter_api_key, model="anthropic/claude-3.7-sonnet")
 
     def synthesize_report(self, research_data: Dict[str, Any], interview_analysis: Dict[str, Any]) -> Dict[str, Any]:
         """

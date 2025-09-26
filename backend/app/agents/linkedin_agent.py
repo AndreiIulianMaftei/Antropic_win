@@ -39,7 +39,7 @@ def create_linkedin_agent() -> Agent:
         system_prompt = prompt_file.read()
 
     agent = Agent(
-        model="gemini-2.0-flash",
+        model="anthropic:claude-3-7-sonnet-latest",
         output_type=ProfileSummary,
         system_prompt=system_prompt,
         toolsets=[linkedIn_server],

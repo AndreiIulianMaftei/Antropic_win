@@ -4,7 +4,7 @@ from openai import OpenAI
 
 class BaseOpenRouterAgent:
     """A base class for Agents that use the OpenRouter API."""
-    def __init__(self, api_key: str, model: str = "x-ai/grok-4-fast:free"):
+    def __init__(self, api_key: str, model: str = "anthropic/claude-3.7-sonnet"):
         if not api_key:
             raise ValueError("OpenRouter API key (API_KEY) is not set.")
         

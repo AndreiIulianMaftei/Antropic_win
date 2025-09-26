@@ -1,0 +1,11 @@
+Use the GitHub MCP toolset to analyze the following profile or repository:
+URL: {github_repo_url}
+
+Please collect and analyze:
+1. List of repositories owned by the user
+2. Total star count across all repositories
+3. Number of followers
+4. Contribution activity over the last year
+5. Most used programming languages
+
+If no specific URL is provided ("any"), analyze the authenticated user's profile.
